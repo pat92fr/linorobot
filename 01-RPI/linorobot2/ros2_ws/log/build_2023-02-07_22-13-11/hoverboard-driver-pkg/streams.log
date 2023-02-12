@@ -1,0 +1,26 @@
+[0.415s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[1.583s] [35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[1.802s] [ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[23.466s] [100%] [32m[1mLinking CXX executable hoverboard-driver[0m
+[24.333s] [100%] Built target hoverboard-driver
+[24.388s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[24.557s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg
+[24.604s] -- Install configuration: ""
+[24.605s] -- Installing: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/hoverboard-driver-pkg/hoverboard-driver
+[24.609s] -- Set runtime path of "/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/hoverboard-driver-pkg/hoverboard-driver" to ""
+[24.611s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/package_run_dependencies/hoverboard-driver-pkg
+[24.612s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/parent_prefix_path/hoverboard-driver-pkg
+[24.613s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/ament_prefix_path.sh
+[24.615s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/ament_prefix_path.dsv
+[24.616s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/path.sh
+[24.617s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/path.dsv
+[24.618s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.bash
+[24.619s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.sh
+[24.626s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.zsh
+[24.627s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.dsv
+[24.627s] -- Installing: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.dsv
+[24.628s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/packages/hoverboard-driver-pkg
+[24.629s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/cmake/hoverboard-driver-pkgConfig.cmake
+[24.630s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/cmake/hoverboard-driver-pkgConfig-version.cmake
+[24.631s] -- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.xml
+[24.646s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg

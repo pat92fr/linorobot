@@ -1,0 +1,7 @@
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:34:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class driver_node[m[K’ {aka ‘[01m[Kclass driver_node[m[K’} has no member named ‘[01m[Kread[m[K’
+   34 |                 hoverboard_node->[01;31m[Kread[m[K();
+      |                                  [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

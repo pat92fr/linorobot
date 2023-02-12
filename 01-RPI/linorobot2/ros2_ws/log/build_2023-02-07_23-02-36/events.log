@@ -1,0 +1,533 @@
+[0.000000] (-) TimerEvent: {}
+[0.001689] (hoverboard-driver-pkg) JobQueued: {'identifier': 'hoverboard-driver-pkg', 'dependencies': OrderedDict()}
+[0.002392] (my_robot_bringup) JobQueued: {'identifier': 'my_robot_bringup', 'dependencies': OrderedDict()}
+[0.003906] (hoverboard-driver-pkg) JobStarted: {'identifier': 'hoverboard-driver-pkg'}
+[0.060932] (my_robot_bringup) JobStarted: {'identifier': 'my_robot_bringup'}
+[0.098970] (-) TimerEvent: {}
+[0.122160] (hoverboard-driver-pkg) JobProgress: {'identifier': 'hoverboard-driver-pkg', 'progress': 'cmake'}
+[0.132056] (hoverboard-driver-pkg) JobProgress: {'identifier': 'hoverboard-driver-pkg', 'progress': 'build'}
+[0.138522] (hoverboard-driver-pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg', '--', '-j4', '-l4'], 'cwd': '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'thales'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/thales'), ('OLDPWD', '/home/thales/linorobot2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1566'), ('SYSTEMD_EXEC_PID', '1944'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2764'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'thales'), ('JOURNAL_STREAM', '8:27668'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'thales'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rover:@/tmp/.ICE-unix/1916,unix/rover:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '67a6ec1c14b14f57b2987e5c216a7af1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cc1a303b-4d35-4a8b-8237-a38dd27e9393'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/thales/linorobot2/ros2_ws/install/bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble')]), 'shell': False}
+[0.181327] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'cmake'}
+[0.188167] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'build'}
+[0.190350] (my_robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup', '--', '-j4', '-l4'], 'cwd': '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'thales'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/thales'), ('OLDPWD', '/home/thales/linorobot2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1566'), ('SYSTEMD_EXEC_PID', '1944'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2764'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'thales'), ('JOURNAL_STREAM', '8:27668'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'thales'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rover:@/tmp/.ICE-unix/1916,unix/rover:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '67a6ec1c14b14f57b2987e5c216a7af1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cc1a303b-4d35-4a8b-8237-a38dd27e9393'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/thales/linorobot2/ros2_ws/install/bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble')]), 'shell': False}
+[0.214301] (-) TimerEvent: {}
+[0.316224] (-) TimerEvent: {}
+[0.418847] (-) TimerEvent: {}
+[0.456015] (my_robot_bringup) CommandEnded: {'returncode': 0}
+[0.484271] (hoverboard-driver-pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target hoverboard-driver\x1b[0m\n'}
+[0.519108] (-) TimerEvent: {}
+[0.598514] (hoverboard-driver-pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o\x1b[0m\n'}
+[0.602546] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'install'}
+[0.619331] (-) TimerEvent: {}
+[0.648636] (my_robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup'], 'cwd': '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'thales'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/thales'), ('OLDPWD', '/home/thales/linorobot2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1566'), ('SYSTEMD_EXEC_PID', '1944'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2764'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'thales'), ('JOURNAL_STREAM', '8:27668'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'thales'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rover:@/tmp/.ICE-unix/1916,unix/rover:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '67a6ec1c14b14f57b2987e5c216a7af1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cc1a303b-4d35-4a8b-8237-a38dd27e9393'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/thales/linorobot2/ros2_ws/install/bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble')]), 'shell': False}
+[0.689586] (my_robot_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.690815] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch\n'}
+[0.691339] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch/bringup.launch.py\n'}
+[0.692061] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/config\n'}
+[0.692864] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/config/gamepad.config.yaml\n'}
+[0.693322] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup\n'}
+[0.693746] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup\n'}
+[0.694450] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh\n'}
+[0.695410] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv\n'}
+[0.696305] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh\n'}
+[0.697530] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv\n'}
+[0.697999] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash\n'}
+[0.699066] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh\n'}
+[0.700151] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh\n'}
+[0.700723] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv\n'}
+[0.701355] (my_robot_bringup) StdoutLine: {'line': b'-- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv\n'}
+[0.702032] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup\n'}
+[0.702767] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake\n'}
+[0.704436] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake\n'}
+[0.705223] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml\n'}
+[0.707987] (my_robot_bringup) CommandEnded: {'returncode': 0}
+[0.719645] (-) TimerEvent: {}
+[0.820738] (-) TimerEvent: {}
+[0.921730] (-) TimerEvent: {}
+[0.996510] (my_robot_bringup) JobEnded: {'identifier': 'my_robot_bringup', 'rc': 0}
+[1.021927] (-) TimerEvent: {}
+[1.122618] (-) TimerEvent: {}
+[1.223769] (-) TimerEvent: {}
+[1.324484] (-) TimerEvent: {}
+[1.425197] (-) TimerEvent: {}
+[1.525924] (-) TimerEvent: {}
+[1.626673] (-) TimerEvent: {}
+[1.727400] (-) TimerEvent: {}
+[1.828201] (-) TimerEvent: {}
+[1.928939] (-) TimerEvent: {}
+[2.029689] (-) TimerEvent: {}
+[2.130494] (-) TimerEvent: {}
+[2.231262] (-) TimerEvent: {}
+[2.332085] (-) TimerEvent: {}
+[2.432852] (-) TimerEvent: {}
+[2.533658] (-) TimerEvent: {}
+[2.634510] (-) TimerEvent: {}
+[2.735305] (-) TimerEvent: {}
+[2.836193] (-) TimerEvent: {}
+[2.937001] (-) TimerEvent: {}
+[3.037846] (-) TimerEvent: {}
+[3.138706] (-) TimerEvent: {}
+[3.239571] (-) TimerEvent: {}
+[3.340374] (-) TimerEvent: {}
+[3.441196] (-) TimerEvent: {}
+[3.542110] (-) TimerEvent: {}
+[3.642908] (-) TimerEvent: {}
+[3.743767] (-) TimerEvent: {}
+[3.844633] (-) TimerEvent: {}
+[3.945547] (-) TimerEvent: {}
+[4.046405] (-) TimerEvent: {}
+[4.147268] (-) TimerEvent: {}
+[4.248222] (-) TimerEvent: {}
+[4.348999] (-) TimerEvent: {}
+[4.450057] (-) TimerEvent: {}
+[4.550949] (-) TimerEvent: {}
+[4.651782] (-) TimerEvent: {}
+[4.752599] (-) TimerEvent: {}
+[4.853559] (-) TimerEvent: {}
+[4.954470] (-) TimerEvent: {}
+[5.055661] (-) TimerEvent: {}
+[5.157195] (-) TimerEvent: {}
+[5.258023] (-) TimerEvent: {}
+[5.358857] (-) TimerEvent: {}
+[5.459778] (-) TimerEvent: {}
+[5.560706] (-) TimerEvent: {}
+[5.661619] (-) TimerEvent: {}
+[5.762713] (-) TimerEvent: {}
+[5.863681] (-) TimerEvent: {}
+[5.964645] (-) TimerEvent: {}
+[6.065512] (-) TimerEvent: {}
+[6.166336] (-) TimerEvent: {}
+[6.267391] (-) TimerEvent: {}
+[6.368956] (-) TimerEvent: {}
+[6.469788] (-) TimerEvent: {}
+[6.570581] (-) TimerEvent: {}
+[6.671436] (-) TimerEvent: {}
+[6.772243] (-) TimerEvent: {}
+[6.873020] (-) TimerEvent: {}
+[6.973840] (-) TimerEvent: {}
+[7.074723] (-) TimerEvent: {}
+[7.175657] (-) TimerEvent: {}
+[7.276495] (-) TimerEvent: {}
+[7.377293] (-) TimerEvent: {}
+[7.478083] (-) TimerEvent: {}
+[7.578871] (-) TimerEvent: {}
+[7.679801] (-) TimerEvent: {}
+[7.780611] (-) TimerEvent: {}
+[7.881401] (-) TimerEvent: {}
+[7.982234] (-) TimerEvent: {}
+[8.083096] (-) TimerEvent: {}
+[8.183998] (-) TimerEvent: {}
+[8.284793] (-) TimerEvent: {}
+[8.385567] (-) TimerEvent: {}
+[8.486348] (-) TimerEvent: {}
+[8.587220] (-) TimerEvent: {}
+[8.688131] (-) TimerEvent: {}
+[8.788944] (-) TimerEvent: {}
+[8.889752] (-) TimerEvent: {}
+[8.990560] (-) TimerEvent: {}
+[9.091421] (-) TimerEvent: {}
+[9.192306] (-) TimerEvent: {}
+[9.293144] (-) TimerEvent: {}
+[9.393975] (-) TimerEvent: {}
+[9.496737] (-) TimerEvent: {}
+[9.597578] (-) TimerEvent: {}
+[9.698667] (-) TimerEvent: {}
+[9.799923] (-) TimerEvent: {}
+[9.900779] (-) TimerEvent: {}
+[10.001729] (-) TimerEvent: {}
+[10.102685] (-) TimerEvent: {}
+[10.203516] (-) TimerEvent: {}
+[10.304390] (-) TimerEvent: {}
+[10.405283] (-) TimerEvent: {}
+[10.506097] (-) TimerEvent: {}
+[10.606911] (-) TimerEvent: {}
+[10.707778] (-) TimerEvent: {}
+[10.808632] (-) TimerEvent: {}
+[10.909455] (-) TimerEvent: {}
+[11.010328] (-) TimerEvent: {}
+[11.111355] (-) TimerEvent: {}
+[11.212584] (-) TimerEvent: {}
+[11.313662] (-) TimerEvent: {}
+[11.414473] (-) TimerEvent: {}
+[11.515280] (-) TimerEvent: {}
+[11.616217] (-) TimerEvent: {}
+[11.717041] (-) TimerEvent: {}
+[11.817920] (-) TimerEvent: {}
+[11.918853] (-) TimerEvent: {}
+[12.019859] (-) TimerEvent: {}
+[12.120890] (-) TimerEvent: {}
+[12.222035] (-) TimerEvent: {}
+[12.322841] (-) TimerEvent: {}
+[12.423840] (-) TimerEvent: {}
+[12.524664] (-) TimerEvent: {}
+[12.625547] (-) TimerEvent: {}
+[12.726458] (-) TimerEvent: {}
+[12.827358] (-) TimerEvent: {}
+[12.928193] (-) TimerEvent: {}
+[13.028978] (-) TimerEvent: {}
+[13.129802] (-) TimerEvent: {}
+[13.230756] (-) TimerEvent: {}
+[13.331744] (-) TimerEvent: {}
+[13.432555] (-) TimerEvent: {}
+[13.465839] (hoverboard-driver-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid driver_node::_cmd_vel_callback(std::shared_ptr<geometry_msgs::msg::Twist_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.467224] (hoverboard-driver-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:21:81:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.468080] (hoverboard-driver-pkg) StderrLine: {'line': b'   21 |         void _cmd_vel_callback(\x1b[01;35m\x1b[Kconst std::shared_ptr<geometry_msgs::msg::Twist> msg\x1b[m\x1b[K) //, const std::string & key)\n'}
+[13.468820] (hoverboard-driver-pkg) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[13.532753] (-) TimerEvent: {}
+[13.633631] (-) TimerEvent: {}
+[13.734425] (-) TimerEvent: {}
+[13.835293] (-) TimerEvent: {}
+[13.936153] (-) TimerEvent: {}
+[14.036978] (-) TimerEvent: {}
+[14.137803] (-) TimerEvent: {}
+[14.238723] (-) TimerEvent: {}
+[14.339651] (-) TimerEvent: {}
+[14.440556] (-) TimerEvent: {}
+[14.542951] (-) TimerEvent: {}
+[14.643773] (-) TimerEvent: {}
+[14.744621] (-) TimerEvent: {}
+[14.845415] (-) TimerEvent: {}
+[14.946218] (-) TimerEvent: {}
+[15.047042] (-) TimerEvent: {}
+[15.147894] (-) TimerEvent: {}
+[15.248773] (-) TimerEvent: {}
+[15.349815] (-) TimerEvent: {}
+[15.450648] (-) TimerEvent: {}
+[15.551580] (-) TimerEvent: {}
+[15.652481] (-) TimerEvent: {}
+[15.753269] (-) TimerEvent: {}
+[15.854194] (-) TimerEvent: {}
+[15.955135] (-) TimerEvent: {}
+[16.056320] (-) TimerEvent: {}
+[16.157235] (-) TimerEvent: {}
+[16.258064] (-) TimerEvent: {}
+[16.358859] (-) TimerEvent: {}
+[16.459681] (-) TimerEvent: {}
+[16.560523] (-) TimerEvent: {}
+[16.661369] (-) TimerEvent: {}
+[16.762284] (-) TimerEvent: {}
+[16.863252] (-) TimerEvent: {}
+[16.964115] (-) TimerEvent: {}
+[17.065027] (-) TimerEvent: {}
+[17.166847] (-) TimerEvent: {}
+[17.267744] (-) TimerEvent: {}
+[17.368669] (-) TimerEvent: {}
+[17.469469] (-) TimerEvent: {}
+[17.570265] (-) TimerEvent: {}
+[17.671284] (-) TimerEvent: {}
+[17.773321] (-) TimerEvent: {}
+[17.874345] (-) TimerEvent: {}
+[17.975166] (-) TimerEvent: {}
+[18.076053] (-) TimerEvent: {}
+[18.176859] (-) TimerEvent: {}
+[18.277833] (-) TimerEvent: {}
+[18.379363] (-) TimerEvent: {}
+[18.480202] (-) TimerEvent: {}
+[18.581056] (-) TimerEvent: {}
+[18.681927] (-) TimerEvent: {}
+[18.782837] (-) TimerEvent: {}
+[18.883779] (-) TimerEvent: {}
+[18.984817] (-) TimerEvent: {}
+[19.085704] (-) TimerEvent: {}
+[19.186603] (-) TimerEvent: {}
+[19.287392] (-) TimerEvent: {}
+[19.388246] (-) TimerEvent: {}
+[19.489059] (-) TimerEvent: {}
+[19.590093] (-) TimerEvent: {}
+[19.690973] (-) TimerEvent: {}
+[19.791887] (-) TimerEvent: {}
+[19.892756] (-) TimerEvent: {}
+[19.993602] (-) TimerEvent: {}
+[20.094458] (-) TimerEvent: {}
+[20.195345] (-) TimerEvent: {}
+[20.296336] (-) TimerEvent: {}
+[20.397394] (-) TimerEvent: {}
+[20.498737] (-) TimerEvent: {}
+[20.599629] (-) TimerEvent: {}
+[20.700489] (-) TimerEvent: {}
+[20.801343] (-) TimerEvent: {}
+[20.902153] (-) TimerEvent: {}
+[21.002994] (-) TimerEvent: {}
+[21.103827] (-) TimerEvent: {}
+[21.204634] (-) TimerEvent: {}
+[21.305467] (-) TimerEvent: {}
+[21.406341] (-) TimerEvent: {}
+[21.507185] (-) TimerEvent: {}
+[21.608194] (-) TimerEvent: {}
+[21.709110] (-) TimerEvent: {}
+[21.810086] (-) TimerEvent: {}
+[21.911123] (-) TimerEvent: {}
+[22.012011] (-) TimerEvent: {}
+[22.112810] (-) TimerEvent: {}
+[22.213633] (-) TimerEvent: {}
+[22.314439] (-) TimerEvent: {}
+[22.415240] (-) TimerEvent: {}
+[22.516286] (-) TimerEvent: {}
+[22.617950] (-) TimerEvent: {}
+[22.718861] (-) TimerEvent: {}
+[22.819721] (-) TimerEvent: {}
+[22.920549] (-) TimerEvent: {}
+[23.021363] (-) TimerEvent: {}
+[23.122174] (-) TimerEvent: {}
+[23.223092] (-) TimerEvent: {}
+[23.323945] (-) TimerEvent: {}
+[23.424767] (-) TimerEvent: {}
+[23.525695] (-) TimerEvent: {}
+[23.626486] (-) TimerEvent: {}
+[23.727308] (-) TimerEvent: {}
+[23.828124] (-) TimerEvent: {}
+[23.928865] (-) TimerEvent: {}
+[24.029604] (-) TimerEvent: {}
+[24.130357] (-) TimerEvent: {}
+[24.231172] (-) TimerEvent: {}
+[24.332109] (-) TimerEvent: {}
+[24.432949] (-) TimerEvent: {}
+[24.533748] (-) TimerEvent: {}
+[24.634769] (-) TimerEvent: {}
+[24.735631] (-) TimerEvent: {}
+[24.836447] (-) TimerEvent: {}
+[24.937256] (-) TimerEvent: {}
+[25.038154] (-) TimerEvent: {}
+[25.139235] (-) TimerEvent: {}
+[25.240379] (-) TimerEvent: {}
+[25.341244] (-) TimerEvent: {}
+[25.442103] (-) TimerEvent: {}
+[25.542920] (-) TimerEvent: {}
+[25.643775] (-) TimerEvent: {}
+[25.744568] (-) TimerEvent: {}
+[25.845521] (-) TimerEvent: {}
+[25.946933] (-) TimerEvent: {}
+[26.047805] (-) TimerEvent: {}
+[26.149253] (-) TimerEvent: {}
+[26.254670] (-) TimerEvent: {}
+[26.355501] (-) TimerEvent: {}
+[26.456338] (-) TimerEvent: {}
+[26.557182] (-) TimerEvent: {}
+[26.658185] (-) TimerEvent: {}
+[26.759089] (-) TimerEvent: {}
+[26.859915] (-) TimerEvent: {}
+[26.960730] (-) TimerEvent: {}
+[27.061594] (-) TimerEvent: {}
+[27.162476] (-) TimerEvent: {}
+[27.263380] (-) TimerEvent: {}
+[27.364231] (-) TimerEvent: {}
+[27.465042] (-) TimerEvent: {}
+[27.565893] (-) TimerEvent: {}
+[27.666737] (-) TimerEvent: {}
+[27.767640] (-) TimerEvent: {}
+[27.868423] (-) TimerEvent: {}
+[27.969236] (-) TimerEvent: {}
+[28.070063] (-) TimerEvent: {}
+[28.170878] (-) TimerEvent: {}
+[28.271664] (-) TimerEvent: {}
+[28.372467] (-) TimerEvent: {}
+[28.473275] (-) TimerEvent: {}
+[28.574067] (-) TimerEvent: {}
+[28.674853] (-) TimerEvent: {}
+[28.775631] (-) TimerEvent: {}
+[28.876426] (-) TimerEvent: {}
+[28.977377] (-) TimerEvent: {}
+[29.078237] (-) TimerEvent: {}
+[29.179133] (-) TimerEvent: {}
+[29.279957] (-) TimerEvent: {}
+[29.380754] (-) TimerEvent: {}
+[29.481605] (-) TimerEvent: {}
+[29.582453] (-) TimerEvent: {}
+[29.683288] (-) TimerEvent: {}
+[29.784178] (-) TimerEvent: {}
+[29.884967] (-) TimerEvent: {}
+[29.985790] (-) TimerEvent: {}
+[30.086511] (-) TimerEvent: {}
+[30.187314] (-) TimerEvent: {}
+[30.288153] (-) TimerEvent: {}
+[30.388973] (-) TimerEvent: {}
+[30.489892] (-) TimerEvent: {}
+[30.590682] (-) TimerEvent: {}
+[30.691525] (-) TimerEvent: {}
+[30.792301] (-) TimerEvent: {}
+[30.893431] (-) TimerEvent: {}
+[30.995193] (-) TimerEvent: {}
+[31.096118] (-) TimerEvent: {}
+[31.196931] (-) TimerEvent: {}
+[31.297725] (-) TimerEvent: {}
+[31.398650] (-) TimerEvent: {}
+[31.499577] (-) TimerEvent: {}
+[31.600722] (-) TimerEvent: {}
+[31.701505] (-) TimerEvent: {}
+[31.802301] (-) TimerEvent: {}
+[31.903095] (-) TimerEvent: {}
+[32.003980] (-) TimerEvent: {}
+[32.105024] (-) TimerEvent: {}
+[32.206754] (-) TimerEvent: {}
+[32.307559] (-) TimerEvent: {}
+[32.408338] (-) TimerEvent: {}
+[32.509110] (-) TimerEvent: {}
+[32.609933] (-) TimerEvent: {}
+[32.710832] (-) TimerEvent: {}
+[32.811650] (-) TimerEvent: {}
+[32.912501] (-) TimerEvent: {}
+[33.013285] (-) TimerEvent: {}
+[33.114140] (-) TimerEvent: {}
+[33.214980] (-) TimerEvent: {}
+[33.315827] (-) TimerEvent: {}
+[33.416644] (-) TimerEvent: {}
+[33.517466] (-) TimerEvent: {}
+[33.618257] (-) TimerEvent: {}
+[33.719120] (-) TimerEvent: {}
+[33.819970] (-) TimerEvent: {}
+[33.920768] (-) TimerEvent: {}
+[34.021579] (-) TimerEvent: {}
+[34.122417] (-) TimerEvent: {}
+[34.223284] (-) TimerEvent: {}
+[34.324135] (-) TimerEvent: {}
+[34.424997] (-) TimerEvent: {}
+[34.525879] (-) TimerEvent: {}
+[34.626834] (-) TimerEvent: {}
+[34.727677] (-) TimerEvent: {}
+[34.828514] (-) TimerEvent: {}
+[34.929261] (-) TimerEvent: {}
+[35.030085] (-) TimerEvent: {}
+[35.130930] (-) TimerEvent: {}
+[35.231773] (-) TimerEvent: {}
+[35.332651] (-) TimerEvent: {}
+[35.433528] (-) TimerEvent: {}
+[35.534422] (-) TimerEvent: {}
+[35.635293] (-) TimerEvent: {}
+[35.736194] (-) TimerEvent: {}
+[35.837002] (-) TimerEvent: {}
+[35.937807] (-) TimerEvent: {}
+[36.038725] (-) TimerEvent: {}
+[36.139555] (-) TimerEvent: {}
+[36.240338] (-) TimerEvent: {}
+[36.341123] (-) TimerEvent: {}
+[36.441909] (-) TimerEvent: {}
+[36.542815] (-) TimerEvent: {}
+[36.643637] (-) TimerEvent: {}
+[36.744479] (-) TimerEvent: {}
+[36.845294] (-) TimerEvent: {}
+[36.946084] (-) TimerEvent: {}
+[37.047000] (-) TimerEvent: {}
+[37.147830] (-) TimerEvent: {}
+[37.248643] (-) TimerEvent: {}
+[37.349483] (-) TimerEvent: {}
+[37.450389] (-) TimerEvent: {}
+[37.551229] (-) TimerEvent: {}
+[37.652141] (-) TimerEvent: {}
+[37.752914] (-) TimerEvent: {}
+[37.853771] (-) TimerEvent: {}
+[37.954602] (-) TimerEvent: {}
+[38.055385] (-) TimerEvent: {}
+[38.156250] (-) TimerEvent: {}
+[38.257072] (-) TimerEvent: {}
+[38.357961] (-) TimerEvent: {}
+[38.458715] (-) TimerEvent: {}
+[38.559532] (-) TimerEvent: {}
+[38.660314] (-) TimerEvent: {}
+[38.761084] (-) TimerEvent: {}
+[38.861946] (-) TimerEvent: {}
+[38.962719] (-) TimerEvent: {}
+[39.063551] (-) TimerEvent: {}
+[39.164339] (-) TimerEvent: {}
+[39.265138] (-) TimerEvent: {}
+[39.365957] (-) TimerEvent: {}
+[39.466790] (-) TimerEvent: {}
+[39.567617] (-) TimerEvent: {}
+[39.668427] (-) TimerEvent: {}
+[39.769328] (-) TimerEvent: {}
+[39.870215] (-) TimerEvent: {}
+[39.971011] (-) TimerEvent: {}
+[40.071890] (-) TimerEvent: {}
+[40.172705] (-) TimerEvent: {}
+[40.273676] (-) TimerEvent: {}
+[40.375068] (-) TimerEvent: {}
+[40.476340] (-) TimerEvent: {}
+[40.577165] (-) TimerEvent: {}
+[40.678968] (-) TimerEvent: {}
+[40.780454] (-) TimerEvent: {}
+[40.881677] (-) TimerEvent: {}
+[40.982781] (-) TimerEvent: {}
+[41.083829] (-) TimerEvent: {}
+[41.184622] (-) TimerEvent: {}
+[41.285416] (-) TimerEvent: {}
+[41.386203] (-) TimerEvent: {}
+[41.487023] (-) TimerEvent: {}
+[41.587903] (-) TimerEvent: {}
+[41.688705] (-) TimerEvent: {}
+[41.789498] (-) TimerEvent: {}
+[41.890264] (-) TimerEvent: {}
+[41.991026] (-) TimerEvent: {}
+[42.091893] (-) TimerEvent: {}
+[42.192659] (-) TimerEvent: {}
+[42.293435] (-) TimerEvent: {}
+[42.394208] (-) TimerEvent: {}
+[42.495014] (-) TimerEvent: {}
+[42.595891] (-) TimerEvent: {}
+[42.696623] (-) TimerEvent: {}
+[42.797396] (-) TimerEvent: {}
+[42.898191] (-) TimerEvent: {}
+[42.999058] (-) TimerEvent: {}
+[43.099984] (-) TimerEvent: {}
+[43.201089] (-) TimerEvent: {}
+[43.303046] (-) TimerEvent: {}
+[43.404279] (-) TimerEvent: {}
+[43.505418] (-) TimerEvent: {}
+[43.608961] (-) TimerEvent: {}
+[43.709924] (-) TimerEvent: {}
+[43.810792] (-) TimerEvent: {}
+[43.911731] (-) TimerEvent: {}
+[44.012654] (-) TimerEvent: {}
+[44.081856] (hoverboard-driver-pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable hoverboard-driver\x1b[0m\n'}
+[44.113214] (-) TimerEvent: {}
+[44.215220] (-) TimerEvent: {}
+[44.316155] (-) TimerEvent: {}
+[44.417163] (-) TimerEvent: {}
+[44.518156] (-) TimerEvent: {}
+[44.619322] (-) TimerEvent: {}
+[44.720842] (-) TimerEvent: {}
+[44.824352] (-) TimerEvent: {}
+[44.925359] (-) TimerEvent: {}
+[45.026255] (-) TimerEvent: {}
+[45.127294] (-) TimerEvent: {}
+[45.228383] (-) TimerEvent: {}
+[45.329150] (-) TimerEvent: {}
+[45.429857] (-) TimerEvent: {}
+[45.530569] (-) TimerEvent: {}
+[45.631277] (-) TimerEvent: {}
+[45.732068] (-) TimerEvent: {}
+[45.832843] (-) TimerEvent: {}
+[45.934003] (-) TimerEvent: {}
+[46.035022] (-) TimerEvent: {}
+[46.136518] (-) TimerEvent: {}
+[46.237261] (-) TimerEvent: {}
+[46.338118] (-) TimerEvent: {}
+[46.347388] (hoverboard-driver-pkg) StdoutLine: {'line': b'[100%] Built target hoverboard-driver\n'}
+[46.401580] (hoverboard-driver-pkg) CommandEnded: {'returncode': 0}
+[46.438357] (-) TimerEvent: {}
+[46.539167] (-) TimerEvent: {}
+[46.567185] (hoverboard-driver-pkg) JobProgress: {'identifier': 'hoverboard-driver-pkg', 'progress': 'install'}
+[46.576344] (hoverboard-driver-pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg'], 'cwd': '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'thales'), ('LC_TIME', 'fr_FR.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/thales'), ('OLDPWD', '/home/thales/linorobot2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'fr_FR.UTF-8'), ('MANAGERPID', '1566'), ('SYSTEMD_EXEC_PID', '1944'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2764'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'thales'), ('JOURNAL_STREAM', '8:27668'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'thales'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rover:@/tmp/.ICE-unix/1916,unix/rover:/tmp/.ICE-unix/1916'), ('INVOCATION_ID', '67a6ec1c14b14f57b2987e5c216a7af1'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'fr_FR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'fr_FR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'fr_FR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:cc1a303b-4d35-4a8b-8237-a38dd27e9393'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'fr_FR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'fr_FR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/thales/linorobot2/ros2_ws/install/bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'fr_FR.UTF-8'), ('LC_PAPER', 'fr_FR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg:/home/thales/linorobot2/ros2_ws/install/my_robot_bringup:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble')]), 'shell': False}
+[46.615305] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[46.617007] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Installing: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/hoverboard-driver-pkg/hoverboard-driver\n'}
+[46.639367] (-) TimerEvent: {}
+[46.651116] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/hoverboard-driver-pkg/hoverboard-driver" to ""\n'}
+[46.651943] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/package_run_dependencies/hoverboard-driver-pkg\n'}
+[46.652468] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/parent_prefix_path/hoverboard-driver-pkg\n'}
+[46.652945] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/ament_prefix_path.sh\n'}
+[46.653393] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/ament_prefix_path.dsv\n'}
+[46.653843] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/path.sh\n'}
+[46.654286] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/environment/path.dsv\n'}
+[46.654772] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.bash\n'}
+[46.655222] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.sh\n'}
+[46.655728] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.zsh\n'}
+[46.656217] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/local_setup.dsv\n'}
+[46.656702] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Installing: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.dsv\n'}
+[46.658950] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/ament_index/resource_index/packages/hoverboard-driver-pkg\n'}
+[46.659661] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/cmake/hoverboard-driver-pkgConfig.cmake\n'}
+[46.660263] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/cmake/hoverboard-driver-pkgConfig-version.cmake\n'}
+[46.660693] (hoverboard-driver-pkg) StdoutLine: {'line': b'-- Up-to-date: /home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.xml\n'}
+[46.666371] (hoverboard-driver-pkg) CommandEnded: {'returncode': 0}
+[46.739616] (-) TimerEvent: {}
+[46.840525] (-) TimerEvent: {}
+[46.941570] (-) TimerEvent: {}
+[46.955176] (hoverboard-driver-pkg) JobEnded: {'identifier': 'hoverboard-driver-pkg', 'rc': 0}
+[46.958991] (-) EventReactorShutdown: {}

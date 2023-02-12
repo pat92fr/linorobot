@@ -1,0 +1,16 @@
+[0.141s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[0.397s] [35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[0.514s] [ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[15.518s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In constructor ‘[01m[Kdriver_node::driver_node()[m[K’:
+[15.518s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:30:40:[m[K [01;31m[Kerror: [m[K‘[01m[K_x_ki[m[K’ was not declared in this scope; did you mean ‘[01m[K_x_kp[m[K’?
+[15.519s]    30 |         this->declare_parameter("x_kd",[01;31m[K_x_ki[m[K);
+[15.520s]       |                                        [01;31m[K^~~~~[m[K
+[15.521s]       |                                        [32m[K_x_kp[m[K
+[15.546s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:36:40:[m[K [01;31m[Kerror: [m[K‘[01m[K_w_ki[m[K’ was not declared in this scope; did you mean ‘[01m[K_w_kp[m[K’?
+[15.546s]    36 |         this->declare_parameter("w_kd",[01;31m[K_w_ki[m[K);
+[15.547s]       |                                        [01;31m[K^~~~~[m[K
+[15.547s]       |                                        [32m[K_w_kp[m[K
+[29.631s] gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+[29.632s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+[29.633s] gmake: *** [Makefile:146: all] Error 2
+[29.641s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4

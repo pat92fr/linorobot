@@ -1,0 +1,26 @@
+[0.165s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[0.488s] [35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[0.595s] [ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[13.459s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In constructor ‘[01m[Kdriver_node::driver_node()[m[K’:
+[13.461s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:13:74:[m[K [01;31m[Kerror: [m[K‘[01m[K_1[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::placeholders::_1[m[K’?
+[13.462s]    13 |                         std::bind(&driver_node::_cmd_vel_callback, this, [01;31m[K_1[m[K)
+[13.463s]       |                                                                          [01;31m[K^~[m[K
+[13.464s]       |                                                                          [32m[Kstd::placeholders::_1[m[K
+[13.464s] In file included from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[13.465s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[13.466s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[13.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[13.467s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[13.468s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[13.469s]                  from [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:1[m[K:
+[13.469s] [01m[K/usr/include/c++/11/functional:225:34:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::placeholders::_1[m[K’ declared here
+[13.470s]   225 |     extern const _Placeholder<1> [01;36m[K_1[m[K;
+[13.471s]       |                                  [01;36m[K^~[m[K
+[13.479s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::_cmd_vel_callback(std::shared_ptr<geometry_msgs::msg::Twist_<std::allocator<void> > >)[m[K’:
+[13.480s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:20:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.480s]    20 |         void _cmd_vel_callback([01;35m[Kconst std::shared_ptr<geometry_msgs::msg::Twist> msg[m[K) //, const std::string & key)
+[13.481s]       |                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[15.673s] gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+[15.674s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+[15.675s] gmake: *** [Makefile:146: all] Error 2
+[15.689s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4

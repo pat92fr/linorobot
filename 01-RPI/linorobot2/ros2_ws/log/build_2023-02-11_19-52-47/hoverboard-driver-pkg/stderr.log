@@ -1,0 +1,12 @@
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In constructor ‘[01m[Kdriver_node::driver_node()[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:30:40:[m[K [01;31m[Kerror: [m[K‘[01m[K_x_ki[m[K’ was not declared in this scope; did you mean ‘[01m[K_x_kp[m[K’?
+   30 |         this->declare_parameter("x_kd",[01;31m[K_x_ki[m[K);
+      |                                        [01;31m[K^~~~~[m[K
+      |                                        [32m[K_x_kp[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:36:40:[m[K [01;31m[Kerror: [m[K‘[01m[K_w_ki[m[K’ was not declared in this scope; did you mean ‘[01m[K_w_kp[m[K’?
+   36 |         this->declare_parameter("w_kd",[01;31m[K_w_ki[m[K);
+      |                                        [01;31m[K^~~~~[m[K
+      |                                        [32m[K_w_kp[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,183 @@
+[2.229s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.230s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa2222650>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa22220e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa22220e0>>)
+[2.442s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.442s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.443s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.444s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.445s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.446s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/thales/linorobot2/ros2_ws'
+[2.449s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.450s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.451s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.523s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.524s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.525s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.526s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.527s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.527s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.528s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.528s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.529s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.531s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.531s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.532s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.532s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.533s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.534s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.534s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.535s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.535s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.535s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.536s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.536s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.538s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.538s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extensions ['ignore', 'ignore_ament_install']
+[2.539s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extension 'ignore'
+[2.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extension 'ignore_ament_install'
+[2.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extensions ['colcon_pkg']
+[2.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extension 'colcon_pkg'
+[2.540s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extensions ['colcon_meta']
+[2.541s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extension 'colcon_meta'
+[2.541s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extensions ['ros']
+[2.541s] Level 1:colcon.colcon_core.package_identification:_identify(src/hoverboard-driver-pkg) by extension 'ros'
+[2.560s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hoverboard-driver-pkg' with type 'ros.ament_cmake' and name 'hoverboard-driver-pkg'
+[2.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[2.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore'
+[2.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore_ament_install'
+[2.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_pkg']
+[2.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_pkg'
+[2.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_meta']
+[2.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_meta'
+[2.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ros']
+[2.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ros'
+[2.566s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_bringup' with type 'ros.ament_cmake' and name 'my_robot_bringup'
+[2.567s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.567s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.567s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.567s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.567s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.734s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/thales/linorobot2/ros2_ws/install
+[2.748s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 273 installed packages in /opt/ros/humble
+[2.757s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.201s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_args' from command line to 'None'
+[3.202s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_target' from command line to 'None'
+[3.208s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.208s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[3.208s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_clean_first' from command line to 'False'
+[3.208s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'cmake_force_configure' from command line to 'False'
+[3.208s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'ament_cmake_args' from command line to 'None'
+[3.209s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[3.209s] Level 5:colcon.colcon_core.verb:set package 'hoverboard-driver-pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.209s] DEBUG:colcon.colcon_core.verb:Building package 'hoverboard-driver-pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg', 'merge_install': False, 'path': '/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg', 'symlink_install': False, 'test_result_base': None}
+[3.218s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[3.219s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[3.220s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.220s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup', 'merge_install': False, 'path': '/home/thales/linorobot2/ros2_ws/src/my_robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[3.223s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.241s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.242s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg' with build type 'ament_cmake'
+[3.243s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg'
+[3.274s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.276s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.276s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.321s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/thales/linorobot2/ros2_ws/src/my_robot_bringup' with build type 'ament_cmake'
+[3.321s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/thales/linorobot2/ros2_ws/src/my_robot_bringup'
+[3.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.335s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[3.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[3.766s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[4.031s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/my_robot_bringup
+[4.126s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_bringup)
+[4.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/my_robot_bringup
+[4.187s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup' for CMake module files
+[4.193s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup' for CMake config files
+[4.197s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'cmake_prefix_path')
+[4.207s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.ps1'
+[4.212s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.dsv'
+[4.216s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.sh'
+[4.225s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/bin'
+[4.226s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[4.227s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages'
+[4.229s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/bin'
+[4.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[4.246s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[4.251s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[4.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[4.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[4.266s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[4.479s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_bringup)
+[4.491s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup' for CMake module files
+[4.496s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup' for CMake config files
+[4.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'cmake_prefix_path')
+[4.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.ps1'
+[4.513s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.dsv'
+[4.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/cmake_prefix_path.sh'
+[4.526s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/bin'
+[4.527s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[4.530s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages'
+[4.531s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/bin'
+[4.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[4.543s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[4.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[4.548s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[4.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[4.553s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[32.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[32.780s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hoverboard-driver-pkg)
+[32.792s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg' for CMake module files
+[32.796s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg' for CMake config files
+[32.798s] Level 1:colcon.colcon_core.shell:create_environment_hook('hoverboard-driver-pkg', 'cmake_prefix_path')
+[32.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/hook/cmake_prefix_path.ps1'
+[32.806s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/hook/cmake_prefix_path.dsv'
+[32.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/hook/cmake_prefix_path.sh'
+[32.812s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib'
+[32.813s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/bin'
+[32.813s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/pkgconfig/hoverboard-driver-pkg.pc'
+[32.815s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/lib/python3.10/site-packages'
+[32.816s] Level 1:colcon.colcon_core.environment:checking '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/bin'
+[32.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.ps1'
+[32.827s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.dsv'
+[32.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.sh'
+[32.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.bash'
+[32.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/hoverboard-driver-pkg/package.zsh'
+[32.844s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/thales/linorobot2/ros2_ws/install/hoverboard-driver-pkg/share/colcon-core/packages/hoverboard-driver-pkg)
+[32.858s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[32.858s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[32.859s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[32.860s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[32.890s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[32.890s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[32.891s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[32.964s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[32.971s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/thales/linorobot2/ros2_ws/install/local_setup.ps1'
+[32.978s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/thales/linorobot2/ros2_ws/install/_local_setup_util_ps1.py'
+[32.992s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/thales/linorobot2/ros2_ws/install/setup.ps1'
+[33.004s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/thales/linorobot2/ros2_ws/install/local_setup.sh'
+[33.010s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/thales/linorobot2/ros2_ws/install/_local_setup_util_sh.py'
+[33.014s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/thales/linorobot2/ros2_ws/install/setup.sh'
+[33.024s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/thales/linorobot2/ros2_ws/install/local_setup.bash'
+[33.028s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/thales/linorobot2/ros2_ws/install/setup.bash'
+[33.039s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/thales/linorobot2/ros2_ws/install/local_setup.zsh'
+[33.044s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/thales/linorobot2/ros2_ws/install/setup.zsh'

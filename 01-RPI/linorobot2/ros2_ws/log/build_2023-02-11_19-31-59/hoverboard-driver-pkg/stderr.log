@@ -1,0 +1,10 @@
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In constructor ‘[01m[Kdriver_node::driver_node()[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:34:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   34 |         this->declare_parameter("w_kp",_w_kp[01;31m[K;[m[K
+      |                                             [01;31m[K^[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:34:32:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   34 |         this->declare_parameter[01;36m[K([m[K"w_kp",_w_kp;
+      |                                [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

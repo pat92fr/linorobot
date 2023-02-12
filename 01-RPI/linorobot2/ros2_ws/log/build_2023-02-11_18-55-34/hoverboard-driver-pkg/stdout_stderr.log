@@ -1,0 +1,19 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:9[m[K:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/include/hoverboard-driver-pkg/pid.h:[m[K In member function ‘[01m[Kfloat pid_ff_controller::process(float, float)[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/include/hoverboard-driver-pkg/pid.h:42:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+   42 |     return [01;31m[Kconstrain[m[K(output,_min_bound,_max_bound);
+      |            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In constructor ‘[01m[Kdriver_node::driver_node()[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:320:27:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdriver_node::_w_pid[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  320 |         pid_ff_controller [01;35m[K_w_pid[m[K;
+      |                           [01;35m[K^~~~~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:290:39:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Ktf2_ros::TransformBroadcaster driver_node::_br[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  290 |         tf2_ros::TransformBroadcaster [01;35m[K_br[m[K;
+      |                                       [01;35m[K^~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:23:9:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   23 |         [01;35m[Kdriver_node[m[K() : Node("hoverboard_driver"),
+      |         [01;35m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

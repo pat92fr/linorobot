@@ -1,0 +1,25 @@
+[0.190s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[0.532s] [35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[0.681s] [ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[15.888s] In file included from [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:9[m[K:
+[15.889s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/include/hoverboard-driver-pkg/pid.h:[m[K In member function ‘[01m[Kfloat pid_ff_controller::process(float, float)[m[K’:
+[15.890s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/include/hoverboard-driver-pkg/pid.h:42:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstrain[m[K’ was not declared in this scope
+[15.890s]    42 |     return [01;31m[Kconstrain[m[K(output,_min_bound,_max_bound);
+[15.891s]       |            [01;31m[K^~~~~~~~~[m[K
+[16.375s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::write()[m[K’:
+[16.376s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:280:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kpwm_mean[m[K’ was not declared in this scope
+[16.377s]   280 |             command.left_speed = std::clamp( (int16_t)([01;31m[Kpwm_mean[m[K-pwm_diff), (int16_t)-1000, (int16_t)1000);
+[16.379s]       |                                                        [01;31m[K^~~~~~~~[m[K
+[16.424s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:280:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kpwm_diff[m[K’ was not declared in this scope
+[16.425s]   280 |             command.left_speed = std::clamp( (int16_t)(pwm_mean-[01;31m[Kpwm_diff[m[K), (int16_t)-1000, (int16_t)1000);
+[16.426s]       |                                                                 [01;31m[K^~~~~~~~[m[K
+[16.428s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:274:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[16.430s]   274 |         float [01;35m[Kx_error[m[K = _setpoint_vx - _actual_vx;
+[16.434s]       |               [01;35m[K^~~~~~~[m[K
+[16.435s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:275:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kw_error[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[16.436s]   275 |         float [01;35m[Kw_error[m[K = _setpoint_wz - _actual_wz;
+[16.437s]       |               [01;35m[K^~~~~~~[m[K
+[29.351s] gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+[29.352s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+[29.354s] gmake: *** [Makefile:146: all] Error 2
+[29.362s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4

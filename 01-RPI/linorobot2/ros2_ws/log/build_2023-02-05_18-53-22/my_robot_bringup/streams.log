@@ -1,0 +1,46 @@
+[0.070s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake /home/thales/linorobot2/ros2_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/thales/linorobot2/ros2_ws/install/my_robot_bringup
+[0.388s] -- The C compiler identification is GNU 11.3.0
+[0.684s] -- The CXX compiler identification is GNU 11.3.0
+[0.722s] -- Detecting C compiler ABI info
+[1.100s] -- Detecting C compiler ABI info - done
+[1.132s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.132s] -- Detecting C compile features
+[1.134s] -- Detecting C compile features - done
+[1.149s] -- Detecting CXX compiler ABI info
+[1.555s] -- Detecting CXX compiler ABI info - done
+[1.587s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.588s] -- Detecting CXX compile features
+[1.590s] -- Detecting CXX compile features - done
+[1.616s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.598s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[3.246s] -- Found ament_lint_auto: 0.12.5 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.757s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.760s] -- Added test 'lint_cmake' to check CMake code style
+[3.764s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.772s] -- Added test 'xmllint' to check XML markup files
+[3.780s] -- Configuring done
+[3.805s] -- Generating done
+[3.810s] -- Build files have been written to: /home/thales/linorobot2/ros2_ws/build/my_robot_bringup
+[3.827s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake /home/thales/linorobot2/ros2_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/thales/linorobot2/ros2_ws/install/my_robot_bringup
+[3.840s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[4.014s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/my_robot_bringup -- -j4 -l4
+[4.198s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/my_robot_bringup
+[4.231s] -- Install configuration: ""
+[4.232s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch
+[4.232s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/launch/bringup.launch.py
+[4.235s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup
+[4.237s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup
+[4.238s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh
+[4.240s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv
+[4.241s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh
+[4.243s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv
+[4.244s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash
+[4.246s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh
+[4.247s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh
+[4.248s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv
+[4.250s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv
+[4.252s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup
+[4.254s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake
+[4.255s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake
+[4.258s] -- Installing: /home/thales/linorobot2/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml
+[4.267s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --install /home/thales/linorobot2/ros2_ws/build/my_robot_bringup

@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:155:14:[m[K [01;31m[Kerror: [m[K‘[01m[KHoverboard[m[K’ has not been declared
+  155 |         void [01;31m[KHoverboard[m[K::write()
+      |              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::write()[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:171:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_command[m[K’ has no member named ‘[01m[Ksteer[m[K’
+  171 |             command.checksum = (uint16_t)(command.start ^ command.[01;31m[Ksteer[m[K ^ command.speed);
+      |                                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:171:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_command[m[K’ has no member named ‘[01m[Kspeed[m[K’
+  171 |             command.checksum = (uint16_t)(command.start ^ command.steer ^ command.[01;31m[Kspeed[m[K);
+      |                                                                                   [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

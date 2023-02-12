@@ -1,0 +1,77 @@
+[0.138s] Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
+[0.671s] [35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[0.888s] [ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[14.988s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In destructor ‘[01m[Kvirtual driver_node::~driver_node()[m[K’:
+[14.988s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:45:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kport_fd[m[K’ was not declared in this scope; did you mean ‘[01m[K_port_fd[m[K’?
+[14.989s]    45 |                 if ([01;31m[Kport_fd[m[K != -1)
+[14.989s]       |                     [01;31m[K^~~~~~~[m[K
+[14.990s]       |                     [32m[K_port_fd[m[K
+[15.009s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::read()[m[K’:
+[15.009s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:51:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kport_fd[m[K’ was not declared in this scope; did you mean ‘[01m[K_port_fd[m[K’?
+[15.010s]    51 |                 if ([01;31m[Kport_fd[m[K != -1)
+[15.010s]       |                     [01;31m[K^~~~~~~[m[K
+[15.011s]       |                     [32m[K_port_fd[m[K
+[15.035s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::protocol_recv(uint8_t)[m[K’:
+[15.036s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:92:59:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialFeedback[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_feedback[m[K’?
+[15.036s]    92 | lse if (msg_len >= 2 && msg_len < sizeof([01;31m[KSerialFeedback[m[K))
+[15.037s]       |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[15.037s]       |                                          [32m[Kserial_feedback[m[K
+[15.060s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:99:39:[m[K [01;31m[Kerror: [m[K‘[01m[KSerialFeedback[m[K’ was not declared in this scope; did you mean ‘[01m[Kserial_feedback[m[K’?
+[15.060s]    99 |                 if (msg_len == sizeof([01;31m[KSerialFeedback[m[K)) {
+[15.061s]       |                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[15.061s]       |                                       [32m[Kserial_feedback[m[K
+[15.061s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:104:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KspeedR_meas[m[K’
+[15.062s]   104 |                         msg.[01;31m[KspeedR_meas[m[K ^
+[15.062s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[15.062s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:105:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KspeedL_meas[m[K’
+[15.063s]   105 |                         msg.[01;31m[KspeedL_meas[m[K ^
+[15.063s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[15.064s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:106:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KbatVoltage[m[K’; did you mean ‘[01m[Kvoltage[m[K’?
+[15.065s]   106 |                         msg.[01;31m[KbatVoltage[m[K ^
+[15.065s]       |                             [01;31m[K^~~~~~~~~~[m[K
+[15.066s]       |                             [32m[Kvoltage[m[K
+[15.066s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:107:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KboardTemp[m[K’
+[15.067s]   107 |                         msg.[01;31m[KboardTemp[m[K ^
+[15.068s]       |                             [01;31m[K^~~~~~~~~[m[K
+[15.068s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:108:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KcmdLed[m[K’; did you mean ‘[01m[Kcmd_led[m[K’?
+[15.069s]   108 |                         msg.[01;31m[KcmdLed[m[K);
+[15.070s]       |                             [01;31m[K^~~~~~[m[K
+[15.070s]       |                             [32m[Kcmd_led[m[K
+[15.071s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:111:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ has not been declared
+[15.072s]   111 |                         [01;31m[Kstd_msgs[m[K::msg::Float64 f;
+[15.073s]       |                         [01;31m[K^~~~~~~~[m[K
+[15.091s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:113:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kf[m[K’ was not declared in this scope
+[15.092s]   113 |                         [01;31m[Kf[m[K.data = (double)msg.batVoltage/100.0;
+[15.092s]       |                         [01;31m[K^[m[K
+[15.093s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:113:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KbatVoltage[m[K’; did you mean ‘[01m[Kvoltage[m[K’?
+[15.093s]   113 |                     f.data = (double)msg.[01;31m[KbatVoltage[m[K/100.0;
+[15.094s]       |                                          [01;31m[K^~~~~~~~~~[m[K
+[15.094s]       |                                          [32m[Kvoltage[m[K
+[15.124s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:114:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoltage_pub_[m[K’ was not declared in this scope
+[15.124s]   114 |                         [01;31m[Kvoltage_pub_[m[K->publish(f);
+[15.125s]       |                         [01;31m[K^~~~~~~~~~~~[m[K
+[15.125s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:116:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KboardTemp[m[K’
+[15.126s]   116 |                     f.data = (double)msg.[01;31m[KboardTemp[m[K/10.0;
+[15.126s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[15.127s] 
+[15.151s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:117:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp_pub_[m[K’ was not declared in this scope
+[15.152s]   117 |                         [01;31m[Ktemp_pub_[m[K->publish(f);
+[15.152s]       |                         [01;31m[K^~~~~~~~~[m[K
+[15.153s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:119:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KspeedL_meas[m[K’
+[15.153s]   119 |                     f.data = (double)msg.[01;31m[KspeedL_meas[m[K;
+[15.154s]       |                                          [01;31m[K^~~~~~~~~~~[m[K
+[15.154s] 
+[15.179s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:120:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_pub_[m[K’ was not declared in this scope
+[15.181s]   120 |                         [01;31m[Kvel_pub_[m[K[0]->publish(f);
+[15.182s]       |                         [01;31m[K^~~~~~~~[m[K
+[15.183s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:121:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct serial_feedback[m[K’ has no member named ‘[01m[KspeedR_meas[m[K’
+[15.185s]   121 |                     f.data = (double)msg.[01;31m[KspeedR_meas[m[K;
+[15.186s]       |                                          [01;31m[K^~~~~~~~~~~[m[K
+[15.187s] 
+[15.208s] [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:125:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kcmd_pub_[m[K’ was not declared in this scope
+[15.209s]   125 |                         [01;31m[Kcmd_pub_[m[K[0]->publish(f);
+[15.209s]       |                         [01;31m[K^~~~~~~~[m[K
+[28.333s] gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+[28.334s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+[28.335s] gmake: *** [Makefile:146: all] Error 2
+[28.345s] Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4

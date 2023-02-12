@@ -1,0 +1,139 @@
+[35m[1mConsolidate compiler generated dependencies of target hoverboard-driver[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hoverboard-driver.dir/src/main.cpp.o[0m
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:[m[K In member function ‘[01m[Kvoid driver_node::protocol_recv(uint8_t)[m[K’:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:178:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+  178 |                                 [01;31m[Ktf2[m[K::Quaternion q;
+      |                                 [01;31m[K^~~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:179:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+  179 |                                 [01;31m[Kq[m[K.setRPY(0.0, 0.0, _heading);
+      |                                 [01;31m[K^[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:183:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  183 |                                odom_msg[01;31m[K->[m[Kheader.frame_id = "odom_frame";
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:184:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  184 |                                odom_msg[01;31m[K->[m[Kchild_frame_id = "base_link_frame";
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:185:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  185 |                                odom_msg[01;31m[K->[m[Kheader.stamp.sec = RCL_NS_TO_S(now);
+      |                                        [01;31m[K^~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:1[m[K:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:185:74:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Krclcpp::Time rclcpp::Node::now() const[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  185 |     odom_msg->header.stamp.sec = RCL_NS_TO_S([01;31m[Kn[m[Kow);
+      |                                              [01;31m[K^[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:186:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  186 |                                odom_msg[01;31m[K->[m[Kheader.stamp.nanosec = now - RCL_S_TO_NS(odom_msg->header.stamp.sec);
+      |                                        [01;31m[K^~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:1[m[K:
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:186:92:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  186 | mp.nanosec = now - RCL_S_TO_NS(odom_msg[01;31m[K->[m[Kheader.stamp.sec);
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:188:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  188 |                                odom_msg[01;31m[K->[m[Kpose.pose.position.x = _x;
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:189:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  189 |                                odom_msg[01;31m[K->[m[Kpose.pose.position.y = _y;
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:190:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  190 |                                odom_msg[01;31m[K->[m[Kpose.pose.position.z = 0.0;
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:191:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  191 |                             odom_msg[01;31m[K->[m[Kpose.pose.orientation.x = q.x();
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:192:33:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  192 |                         odom_msg[01;31m[K->[m[Kpose.pose.orientation.y = q.y();
+      |                                 [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:193:33:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  193 |                         odom_msg[01;31m[K->[m[Kpose.pose.orientation.z = q.z();
+      |                                 [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:194:33:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  194 |                         odom_msg[01;31m[K->[m[Kpose.pose.orientation.w = q.w();
+      |                                 [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:196:66:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  196 |   for (unsigned int i = 0; i < odom_msg[01;31m[K->[m[Kpose.covariance.size(); ++i)
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:198:41:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  198 |                                odom_msg[01;31m[K->[m[Kpose.covariance[i] = 0.0;
+      |                                        [01;31m[K^~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:204:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  204 |                             odom_msg[01;31m[K->[m[Kpose.covariance[0] = 0.1;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:205:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  205 |                             odom_msg[01;31m[K->[m[Kpose.covariance[7] = 0.1;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:206:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  206 |                             odom_msg[01;31m[K->[m[Kpose.covariance[35] = 0.2;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:207:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  207 |                             odom_msg[01;31m[K->[m[Kpose.covariance[14] = DBL_MAX;  // set a non-zero covariance on unused
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:207:61:[m[K [01;31m[Kerror: [m[K‘[01m[KDBL_MAX[m[K’ was not declared in this scope
+  207 |        odom_msg->pose.covariance[14] = [01;31m[KDBL_MAX[m[K;  // set a non-zero covariance on unused
+      |                                        [01;31m[K^~~~~~~[m[K
+
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:13:1:[m[K [01;36m[Knote: [m[K‘[01m[KDBL_MAX[m[K’ is defined in header ‘[01m[K<cfloat>[m[K’; did you forget to ‘[01m[K#include <cfloat>[m[K’?
+   12 | #include <math.h>
+  +++ |+[32m[K#include <cfloat>[m[K
+   13 | 
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:208:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  208 |                             odom_msg[01;31m[K->[m[Kpose.covariance[21] = DBL_MAX;  // dimensions (z, pitch and roll); this
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:209:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  209 |                             odom_msg[01;31m[K->[m[Kpose.covariance[28] = DBL_MAX;  // is a requirement of robot_pose_ekf
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:211:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  211 |                             odom_msg[01;31m[K->[m[Ktwist.twist.linear.x = vx; // RRF ! WRF ?
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:212:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  212 |                             odom_msg[01;31m[K->[m[Ktwist.twist.linear.y = 0.0; //  RRF ! WRF ?
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:213:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  213 |                             odom_msg[01;31m[K->[m[Ktwist.twist.linear.z = 0.0;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:214:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  214 |                             odom_msg[01;31m[K->[m[Ktwist.twist.angular.x = 0.0;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:215:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  215 |                             odom_msg[01;31m[K->[m[Ktwist.twist.angular.y = 0.0;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:216:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Knav_msgs::msg::Odometry_<std::allocator<void> >[m[K’
+  216 |                             odom_msg[01;31m[K->[m[Ktwist.twist.angular.z = wz;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/thales/linorobot2/ros2_ws/src/hoverboard-driver-pkg/src/main.cpp:217:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+  217 |                         _odom_pub.[01;31m[Kpublish[m[K(odom_msg);
+      |                                   [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/hoverboard-driver.dir/build.make:76: CMakeFiles/hoverboard-driver.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/hoverboard-driver.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

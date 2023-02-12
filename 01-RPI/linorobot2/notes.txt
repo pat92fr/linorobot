@@ -1,0 +1,52 @@
+ros2 run joy joy_node
+
+ros2 launch teleop_twist_joy teleop-launch.py 
+
+ros2 node list
+ros2 topic list
+
+ros2 topic echo /cmd_vel
+
+
+launch bringup :
+----------------
+thales@rover:~/linorobot2/ros2_ws$ ros2 launch my_robot_bringup bringup.launch.py
+
+
+create a cpp package :
+----------------------
+in src directory
+thales@rover:ros2 pkg create hoverboard-driver-pkg --build-type ament_cmake --dependencies rclcpp
+colcon build
+. install/setup.bash 
+ros2 run hoverboard-driver-pkg hoverboard-driver
+
+Display URDF in RVIZ2
+---------------------
+based on 
+
+https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html
+
+into my_robot_bringup directory, near urdf/
+
+ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.urdf
+
+ros2 control :
+based on 
+
+https://github.com/ros-controls/ros2_control_demos
+
+
+
+Lauch everything :
+------------------
+thales@rover:~/linorobot2/ros2_ws$ ros2 launch my_robot_bringup bringup.launch.py 
+thales@rover:~/linorobot2/ros2_ws$ ros2 run hoverboard-driver-pkg hoverboard-driver 
+thales@rover:~/linorobot2/ros2_ws/src/my_robot_bringup$ ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.xacro
+ros2 run tf2_ros tf2_echo odom base_link
+
+Analyse du topic odom linear
+
+ros2 topic echo odom --field twist | grep -A 3 linear
+
+
