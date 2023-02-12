@@ -1,2 +1,0 @@
-Invoking command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
-Invoked command in '/home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/thales/linorobot2/ros2_ws/install/bringup:/opt/ros/humble /usr/bin/cmake --build /home/thales/linorobot2/ros2_ws/build/hoverboard-driver-pkg -- -j4 -l4
