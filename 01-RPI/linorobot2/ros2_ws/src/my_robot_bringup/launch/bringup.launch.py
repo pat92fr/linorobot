@@ -43,16 +43,16 @@ def generate_launch_description():
                 name='hoverboard_driver_node',
                 parameters=[
                     {
-                        'x_kp': 100.0,
-                        'x_kd': 0.0,
-                        'x_kff': 240.0,
+                        'x_kp': 800.0,
+                        'x_kd': 1.0,
+                        'x_kff': 280.0,
                         'x_d_alpha': 0.1,
-                        'x_o_alpha': 1.0,
-                        'w_kp': 100.0,
+                        'x_o_alpha': 0.05,
+                        'w_kp': 200.0,
                         'w_kd': 0.0,
-                        'w_kff': 240.0,
+                        'w_kff': 280.0,
                         'w_d_alpha': 0.1,
-                        'w_o_alpha': 1.0,
+                        'w_o_alpha': 0.05,
                     }
                 ]
 	   ),            

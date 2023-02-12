@@ -64,13 +64,15 @@ public:
 		);	
 
 		// odometry publisher
- 		//rmw_qos_profile_t odom_qos_profile = rmw_qos_profile_sensor_data;
  		_odom_pub = create_publisher<nav_msgs::msg::Odometry>(
  			"/odom",
  			10
  		);
 
- 		//tf2_ros::TransformBroadcaster br(this);
+ 		_speed_setpoint_pub = create_publisher<geometry_msgs::msg::Twist>(
+ 			"/speed_setpoint",
+ 			10
+ 		);
 
 		// Init serial communication
 	    if ((_port_fd = open(PORT, O_RDWR | O_NOCTTY | O_NDELAY)) < 0) {
@@ -307,6 +309,11 @@ public:
     	float x_speed = _x_pid.process(x_error,_setpoint_vx);
     	float w_speed = _w_pid.process(w_error,_setpoint_wz);
 
+    	geometry_msgs::msg::Twist m;
+    	m.linear.x = x_speed;
+    	m.angular.z = w_speed;
+		_speed_setpoint_pub->publish(m);
+
     	// prepare command
 	    serial_command command;
 	    command.start = (uint16_t)START_FRAME;
@@ -326,6 +333,7 @@ public:
 private:
 	rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr _cmd_vel_sub;
 	rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr _odom_pub;
+	rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr _speed_setpoint_pub;
 	tf2_ros::TransformBroadcaster _br;
 
 	void _cmd_vel_callback(const std::shared_ptr<geometry_msgs::msg::Twist> msg) //, const std::string & key)
