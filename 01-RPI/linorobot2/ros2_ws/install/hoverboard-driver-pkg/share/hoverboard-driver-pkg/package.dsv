@@ -1,8 +1,0 @@
-source;share/hoverboard-driver-pkg/hook/cmake_prefix_path.ps1
-source;share/hoverboard-driver-pkg/hook/cmake_prefix_path.dsv
-source;share/hoverboard-driver-pkg/hook/cmake_prefix_path.sh
-source;share/hoverboard-driver-pkg/local_setup.bash
-source;share/hoverboard-driver-pkg/local_setup.dsv
-source;share/hoverboard-driver-pkg/local_setup.ps1
-source;share/hoverboard-driver-pkg/local_setup.sh
-source;share/hoverboard-driver-pkg/local_setup.zsh
