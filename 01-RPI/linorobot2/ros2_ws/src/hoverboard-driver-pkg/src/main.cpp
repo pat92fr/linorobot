@@ -26,6 +26,9 @@ public:
 	_w_pid(&_w_kp,&_w_kd,&_w_kff,-1000.0,1000.0)
 	
 	{
+		this->declare_parameter("acc",_acceleration);
+		this->declare_parameter("dec",_deceleration);
+
 		this->declare_parameter("x_kp",_x_kp);
         this->declare_parameter("x_kd",_x_kd);
         this->declare_parameter("x_kff",_x_kff);
@@ -37,6 +40,9 @@ public:
         this->declare_parameter("w_kff",_w_kff);
         this->declare_parameter("w_d_alpha",_w_d_alpha);
         this->declare_parameter("w_o_alpha",_w_o_alpha);
+
+        _acceleration = this->get_parameter("acc").as_double();
+        _deceleration = this->get_parameter("dec").as_double();
 
         _x_kp = this->get_parameter("x_kp").as_double();
         _x_kd = this->get_parameter("x_kd").as_double();
@@ -289,26 +295,32 @@ public:
 
 	void write()
 	{
-	    if (_port_fd == -1)
+	    if(_port_fd == -1)
 	    {
         	RCLCPP_ERROR(this->get_logger(), "Attempt to write on closed serial");
         	return;
     	}
 
-    	// Calculate steering from difference of left and right //TODO : change this shiiit
-    	//float pwm_mean = _setpoint_vx * 1000.0f;
-    	//float pwm_diff = _setpoint_wz * 1000.0f;
-
+    	// filter speed feedback
     	static float const alpha = 0.5f;
 		_actual_vx_filtered = (1.0f-alpha)*_actual_vx_filtered+alpha*_actual_vx;
 		_actual_wz_filtered = (1.0f-alpha)*_actual_wz_filtered+alpha*_actual_wz;
 
-    	float x_error = _setpoint_vx - _actual_vx_filtered;
+    	// speed profil
+    	static float const dt = 0.010; // 10ms UART feedback rate
+		if(_setpoint_vx>_setpoint_vx_profil)
+			_setpoint_vx_profil = std::min(_setpoint_vx_profil+_acceleration*dt,_setpoint_vx);
+		else
+			_setpoint_vx_profil = std::max(_setpoint_vx_profil-_deceleration*dt,_setpoint_vx);
+
+    	// control
+    	float x_error = _setpoint_vx_profil - _actual_vx_filtered;
     	float w_error = _setpoint_wz - _actual_wz_filtered;
 
-    	float x_speed = _x_pid.process(x_error,_setpoint_vx);
+    	float x_speed = _x_pid.process(x_error,_setpoint_vx_profil);
     	float w_speed = _w_pid.process(w_error,_setpoint_wz);
 
+    	// trace
     	geometry_msgs::msg::Twist m;
     	m.linear.x = x_speed;
     	m.angular.z = w_speed;
@@ -317,8 +329,6 @@ public:
     	// prepare command
 	    serial_command command;
 	    command.start = (uint16_t)START_FRAME;
-	    //command.left_speed = std::clamp( (int16_t)(pwm_mean-pwm_diff), (int16_t)-1000, (int16_t)1000);
-	    //command.right_speed = std::clamp( (int16_t)(pwm_mean+pwm_diff), (int16_t)-1000, (int16_t)1000);
 	    command.left_speed = std::clamp( (int16_t)(x_speed-w_speed), (int16_t)-1000, (int16_t)1000);
 	    command.right_speed = std::clamp( (int16_t)(x_speed+w_speed), (int16_t)-1000, (int16_t)1000);
 	    command.checksum = (uint16_t)(command.start ^ command.left_speed ^ command.right_speed);
@@ -346,6 +356,11 @@ private:
 	// setpoints
 	float _setpoint_vx = 0.0f;
 	float _setpoint_wz = 0.0f;
+
+	// setpoint with acc/speed profil
+	float _acceleration = 1.0f;
+	float _deceleration = 0.5f;
+	float _setpoint_vx_profil = 0.0f;
 
 	// actual
 	float _actual_vx = 0.0f;
