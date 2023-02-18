@@ -4,4 +4,7 @@
 03-NUCIntel\ros2_ws\log
 03-NUCIntel\ros2_ws\build
 03-NUCIntel\ros2_ws\install
+install/
+build/
+log/
 *.log
