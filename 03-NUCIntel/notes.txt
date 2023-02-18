@@ -1,0 +1,106 @@
+Installation :
+--------------
+
+Put in ~/.bashrc thoses following lines :
+
+source /opt/ros/humble/setup.bash
+export ROS_DOMAIN_ID=76
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+source /usr/share/colcon_cd/function/colcon_cd.sh
+export _colcon_cd_root=/opt/ros/humble/
+
+source ~/ros2_ws/install/setup.bash
+
+
+Gamepad :
+---------
+
+Pair the BT gamepad using desktop
+
+Check gamepad device :
+
+ls /dev/input
+**show js0
+
+
+FTDI :
+------
+
+ls /dev/
+**show ttyUSB0
+
+
+###sudo usermod -a -G dialout $USER
+
+The easy way:
+
+sudoedit /etc/udev/rules.d/50-myusb.rules
+
+Save this text:
+
+KERNEL=="ttyUSB[0-9]*",MODE="0666"
+KERNEL=="ttyACM[0-9]*",MODE="0666"
+
+Unplug the device and replug it, and it should be read/write from any user!
+
+
+
+ROS bascis :
+------------
+
+ros2 run joy joy_node
+
+ros2 launch teleop_twist_joy teleop-launch.py 
+
+ros2 node list
+
+ros2 topic list
+
+ros2 topic echo /cmd_vel
+
+
+launch bringup :
+----------------
+~/ros2_ws$ ros2 launch my_robot_bringup bringup.launch.py
+
+
+
+create a cpp package :
+----------------------
+in src directory
+thales@rover:ros2 pkg create hoverboard-driver-pkg --build-type ament_cmake --dependencies rclcpp
+colcon build
+. install/setup.bash 
+ros2 run hoverboard-driver-pkg hoverboard-driver
+
+Display URDF in RVIZ2
+---------------------
+based on 
+
+https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Visual-Robot-Model-with-URDF-from-Scratch.html
+
+into my_robot_bringup directory, near urdf/
+
+ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.urdf
+
+ros2 control :
+based on 
+
+https://github.com/ros-controls/ros2_control_demos
+
+
+
+Lauch everything :
+------------------
+thales@rover:~/linorobot2/ros2_ws$ ros2 launch my_robot_bringup bringup.launch.py 
+thales@rover:~/linorobot2/ros2_ws$ ros2 run hoverboard-driver-pkg hoverboard-driver 
+thales@rover:~/linorobot2/ros2_ws/src/my_robot_bringup$ ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.xacro
+ros2 run tf2_ros tf2_echo odom base_link
+
+roslaunch my_robot_bringup display.launch.py model:=src/my_robot_bringup/urdf/my_robot.xacro 
+
+Analyse du topic odom linear
+
+ros2 topic echo odom --field twist | grep -A 3 linear
+
+
