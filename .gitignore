@@ -1,4 +1,7 @@
 01-RPI\linorobot2\ros2_ws\log
 01-RPI\linorobot2\ros2_ws\build
 01-RPI\linorobot2\ros2_ws\install
+03-NUCIntel\ros2_ws\log
+03-NUCIntel\ros2_ws\build
+03-NUCIntel\ros2_ws\install
 *.log
