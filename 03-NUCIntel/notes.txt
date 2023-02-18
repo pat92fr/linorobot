@@ -43,7 +43,12 @@ KERNEL=="ttyACM[0-9]*",MODE="0666"
 
 Unplug the device and replug it, and it should be read/write from any user!
 
+LIDAR :
+-------
 
+https://github.com/Hokuyo-aut/urg_node2
+
+ros2 launch urg_node2 urg_node2.launch.py
 
 ROS bascis :
 ------------
