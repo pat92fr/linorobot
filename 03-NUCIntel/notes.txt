@@ -102,7 +102,7 @@ thales@rover:~/linorobot2/ros2_ws$ ros2 run hoverboard-driver-pkg hoverboard-dri
 thales@rover:~/linorobot2/ros2_ws/src/my_robot_bringup$ ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.xacro
 ros2 run tf2_ros tf2_echo odom base_link
 
-roslaunch my_robot_bringup display.launch.py model:=src/my_robot_bringup/urdf/my_robot.xacro 
+ros2 launch my_robot_bringup display.launch.py model:=src/my_robot_bringup/urdf/my_robot.xacro 
 
 Analyse du topic odom linear
 
