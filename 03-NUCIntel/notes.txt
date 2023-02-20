@@ -108,4 +108,17 @@ Analyse du topic odom linear
 
 ros2 topic echo odom --field twist | grep -A 3 linear
 
+SLAM :
+------
+https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html
+
+ros2 launch slam_toolbox online_async_launch.py
+ros2 launch nav2_bringup navigation_launch.py
+
+
+
+
+
+
+
 
