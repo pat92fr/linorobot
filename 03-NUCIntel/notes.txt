@@ -22,6 +22,8 @@ source /opt/ros/humble/setup.bash
 export ROS_DOMAIN_ID=76
 source ~/ros2_ws/install/setup.bash
 
+Xlaunch
+"C:\Program Files\VcXsrv\vcxsrv.exe" :0 -ac -terminate -lesspointer -multiwindow -clipboard -wgl -dpi auto
 
 Gamepad :
 ---------
