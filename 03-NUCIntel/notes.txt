@@ -99,7 +99,7 @@ https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/Building-a-Visual-Rob
 
 into my_robot_bringup directory, near urdf/
 
-ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.urdf
+ros2 launch my_robot_bringup display.launch.py model:=urdf/my_robot.xacro
 
 ros2 control :
 based on 
