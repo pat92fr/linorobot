@@ -127,37 +127,37 @@ public:
 				_x_kp = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_x_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "x_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_ki = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_x_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "x_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_kd = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_x_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "x_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_kff = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_w_kp" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "w_kp" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kp = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_w_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "w_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_ki = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_w_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "w_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kd = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
-            if (parameter.get_name() == "_w_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
+            if (parameter.get_name() == "w_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kff = parameter.as_double();
                 RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
@@ -235,7 +235,7 @@ public:
 				float left_speed_rpm = -(double)msg.left_speed_meas;
 				float right_speed_rpm = (double)msg.right_speed_meas; // need to be inverted into hoverboard firmware
 
-				if(false)
+				if(true)
 			        RCLCPP_INFO(this->get_logger(), 
 			        	"Hoverboard checksum OK: Batt:%.1fV   T:%.1f   Left:%.0fRPM   Right:%0.0fRPM",
 			        	voltage_V,
@@ -261,6 +261,9 @@ public:
 		        static float const base_width = 0.560f; 
 		        _actual_vx = (left_speed_mps+right_speed_mps)/2.0f;
 		        _actual_wz = (left_speed_mps-right_speed_mps)/base_width; // approx for small angle
+
+				// reply
+				write();
 
 				// calculate distance, angle 
 		        static float const dt = 0.010; // 10ms UART feedback rate
@@ -345,8 +348,6 @@ public:
 			    odom_tf_msg.transform.rotation.w = q.w();
 			    _br.sendTransform(odom_tf_msg);
 
-		        // reply
-		        write();
 		    }
 		    else
 		    {
