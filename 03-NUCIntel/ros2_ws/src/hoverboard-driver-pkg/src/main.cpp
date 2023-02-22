@@ -1,4 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
+#include "rcl_interfaces/msg/set_parameters_result.hpp"
 
 #include <geometry_msgs/msg/twist.hpp>
 #include "nav_msgs/msg/odometry.hpp"
@@ -70,7 +71,7 @@ public:
         _w_pid._d_alpha = _w_d_alpha;
         _w_pid._out_alpha = _w_o_alpha;
 
-		this->set_on_parameters_set_callback(std::bind(&TestParams::dynamic_parameters_cb, this, std::placeholders::_1));
+		_param_cb_ptr = this->add_on_set_parameters_callback(std::bind(&driver_node::dynamic_parameters_cb, this, std::placeholders::_1));
 
 		RCLCPP_INFO(this->get_logger(),"Starting...");
 		_cmd_vel_sub = create_subscription<geometry_msgs::msg::Twist>(
@@ -124,42 +125,42 @@ public:
             if (parameter.get_name() == "x_kp" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_kp = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_x_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_ki = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_x_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_kd = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_x_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_x_kff = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_w_kp" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kp = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_w_ki" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_ki = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_w_kd" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kd = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
             if (parameter.get_name() == "_w_kff" && parameter.get_type() == rclcpp::ParameterType::PARAMETER_DOUBLE)
             {
 				_w_kff = parameter.as_double();
-                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %s", parameter.get_name(), parameter.as_double());
+                RCLCPP_INFO(this->get_logger(), "Parameter %s changed: %f", parameter.get_name().c_str(), parameter.as_double());
             }
         }
         return result;
@@ -424,6 +425,7 @@ private:
 	rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr _odom_pub;
 	rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr _speed_setpoint_pub;
 	tf2_ros::TransformBroadcaster _br;
+	OnSetParametersCallbackHandle::SharedPtr _param_cb_ptr;
 
 	void _cmd_vel_callback(const std::shared_ptr<geometry_msgs::msg::Twist> msg) //, const std::string & key)
 	{
