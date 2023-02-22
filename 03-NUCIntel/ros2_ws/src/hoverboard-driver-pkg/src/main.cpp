@@ -104,7 +104,20 @@ public:
 	    options.c_oflag = 0;
 	    options.c_lflag = 0;
 	    tcflush(_port_fd, TCIFLUSH);
-	    tcsetattr(_port_fd, TCSANOW, &options);			
+	    tcsetattr(_port_fd, TCSANOW, &options);	
+
+		// get time
+		rcutils_time_point_value_t now;
+		if (rcutils_system_time_now(&now) != RCUTILS_RET_OK)
+		{
+			RCLCPP_ERROR(this->get_logger(), "Failed to get system time");
+		}
+		_stat_start_time_s = RCL_NS_TO_S(now);	
+
+		_timer = this->create_wall_timer(
+			std::chrono::milliseconds(5),
+			std::bind(&driver_node::read, this)
+		);
 	}
 
 	~driver_node()
@@ -235,7 +248,7 @@ public:
 				float left_speed_rpm = -(double)msg.left_speed_meas;
 				float right_speed_rpm = (double)msg.right_speed_meas; // need to be inverted into hoverboard firmware
 
-				if(true)
+				if(false)
 			        RCLCPP_INFO(this->get_logger(), 
 			        	"Hoverboard checksum OK: Batt:%.1fV   T:%.1f   Left:%.0fRPM   Right:%0.0fRPM",
 			        	voltage_V,
@@ -348,10 +361,23 @@ public:
 			    odom_tf_msg.transform.rotation.w = q.w();
 			    _br.sendTransform(odom_tf_msg);
 
+				// stats
+				++_stat_feedback_count;
+				static int32_t counter = 0;
+				if(++counter%100==0)
+				{
+					int32_t ellapsed_time = RCL_NS_TO_S(now) - _stat_start_time_s;
+					float packet_error_rate = (float)_stat_feedback_checksum_error/(float)_stat_feedback_count;
+					float frequency = (float)_stat_feedback_count/(float)ellapsed_time;
+					RCLCPP_INFO(this->get_logger(), "PER:%0.3f Freq:%.1f",packet_error_rate,frequency);
+				}
 		    }
 		    else
 		    {
-		        RCLCPP_INFO(this->get_logger(), "Hoverboard checksum mismatch: %d vs %d", msg.checksum, checksum);
+		        //RCLCPP_INFO(this->get_logger(), "Hoverboard checksum mismatch: %d vs %d", msg.checksum, checksum);
+				// stats
+				++_stat_feedback_checksum_error;
+				++_stat_feedback_count;
 		    }
 		    msg_len = 0;
 		}
@@ -428,6 +454,8 @@ private:
 	tf2_ros::TransformBroadcaster _br;
 	OnSetParametersCallbackHandle::SharedPtr _param_cb_ptr;
 
+	rclcpp::TimerBase::SharedPtr _timer;
+
 	void _cmd_vel_callback(const std::shared_ptr<geometry_msgs::msg::Twist> msg) //, const std::string & key)
 	{
 		//RCLCPP_INFO(this->get_logger(),"CMD_VEL %.3f %.3f",msg->linear.x,msg->angular.z);
@@ -494,19 +522,25 @@ private:
     serial_feedback msg;
     serial_feedback prev_msg;
 
+	// statistics
+	uint32_t _stat_feedback_count = 0;
+	uint32_t _stat_feedback_checksum_error = 0;
+	uint32_t _stat_start_time_s = 0;
+
 };
 
 int main(int argc, char ** argv)
 {
 	rclcpp::init(argc,argv);
 	auto hoverboard_node = std::make_shared<driver_node>();
-	////rclcpp::spin(hoverboard_node);
-	while (rclcpp::ok())
+	rclcpp::spin(hoverboard_node);
+	/*while (rclcpp::ok())
 	{
 		hoverboard_node->read();
 		//hoverboard_node->write();
 		rclcpp::spin_some(hoverboard_node);
-	}  	
+		//rclcpp::spin_once(hoverboard_node);
+	}  	*/
 	rclcpp::shutdown();
 	return 0;
 }
