@@ -7,4 +7,5 @@
 install/
 build/
 log/
+.vscode/
 *.log
