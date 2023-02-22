@@ -336,8 +336,8 @@ public:
 
 			    // Stuff and publish /tf
 				auto odom_tf_msg = geometry_msgs::msg::TransformStamped();
-				odom_tf_msg.header.frame_id = "world"; //odom_msg.header.frame_id;
-				odom_tf_msg.child_frame_id = "base_footprint"; //odom_msg.child_frame_id;			    
+				odom_tf_msg.header.frame_id = "odom"; //odom_msg.header.frame_id;
+				odom_tf_msg.child_frame_id = "base_link"; //odom_msg.child_frame_id;			    
 			    odom_tf_msg.header.stamp = odom_msg.header.stamp;
 			    odom_tf_msg.transform.translation.x = _x;
 			    odom_tf_msg.transform.translation.y = _y;
