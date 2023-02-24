@@ -42,6 +42,11 @@ FTDI :
 ls /dev/
 **show ttyUSB0
 
+pour voir les connexions de périphériques 
+sudo dmesg | grep usb
+
+pour voir les périphériques
+lsusb
 
 ###sudo usermod -a -G dialout $USER
 
@@ -55,6 +60,10 @@ KERNEL=="ttyUSB[0-9]*",MODE="0666"
 KERNEL=="ttyACM[0-9]*",MODE="0666"
 
 Unplug the device and replug it, and it should be read/write from any user!
+
+For two FTDI with CH34x
+https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/linux
+
 
 LIDAR :
 -------
