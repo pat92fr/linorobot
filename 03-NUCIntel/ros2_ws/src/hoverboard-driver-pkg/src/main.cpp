@@ -22,7 +22,7 @@ class driver_node : public rclcpp::Node
 {
 public:
 	driver_node() : Node("hoverboard_driver"),
-	_br(this),
+	//_br(this),
 	_x_pid(&_x_kp,&_x_ki,&_x_kd,&_x_kff,-1000.0,1000.0),
 	_w_pid(&_w_kp,&_w_ki,&_w_kd,&_w_kff,-1000.0,1000.0)
 	
@@ -82,7 +82,7 @@ public:
 
 		// odometry publisher
  		_odom_pub = create_publisher<nav_msgs::msg::Odometry>(
- 			"/odom",
+ 			"/odom_wheel",
  			10
  		);
 
@@ -359,7 +359,7 @@ public:
 			    odom_tf_msg.transform.rotation.y = q.y();
 			    odom_tf_msg.transform.rotation.z = q.z();
 			    odom_tf_msg.transform.rotation.w = q.w();
-			    _br.sendTransform(odom_tf_msg);
+			    //_br.sendTransform(odom_tf_msg);
 
 				// stats
 				++_stat_feedback_count;
@@ -451,7 +451,7 @@ private:
 	rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr _cmd_vel_sub;
 	rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr _odom_pub;
 	rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr _speed_setpoint_pub;
-	tf2_ros::TransformBroadcaster _br;
+	//tf2_ros::TransformBroadcaster _br;
 	OnSetParametersCallbackHandle::SharedPtr _param_cb_ptr;
 
 	rclcpp::TimerBase::SharedPtr _timer;

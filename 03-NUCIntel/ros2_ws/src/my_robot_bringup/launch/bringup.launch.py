@@ -33,6 +33,11 @@ def generate_launch_description():
         "hoverboard-driver.config.yaml"
     )
 
+    robot_localization_config_filepath = os.path.join(
+        config_filepath,
+        "robot_localization.config.yaml"
+    )
+
     #with open(hoverboard_driver_config_filepath, 'r') as f:
     #    params = yaml.safe_load(f)['hoverboard_driver_node']['ros__parameters']
     #print(params)
@@ -40,41 +45,56 @@ def generate_launch_description():
 
     return launch.LaunchDescription(
         [
-		# Start URG_NODE2 (LIDAR) using urg_node2 launch file
-		IncludeLaunchDescription(
-			PythonLaunchDescriptionSource(
-				[
-					PathJoinSubstitution(
-						[
-							FindPackageShare('urg_node2'),
-							"launch/"
-							'urg_node2.launch.py'
-						]
-					)
-				]
+			# Start URG_NODE2 (LIDAR) using urg_node2 launch file
+			IncludeLaunchDescription(
+				PythonLaunchDescriptionSource(
+					[
+						PathJoinSubstitution(
+							[
+								FindPackageShare('urg_node2'),
+								"launch/"
+								'urg_node2.launch.py'
+							]
+						)
+					]
+				),
+				launch_arguments={}.items()
 			),
-			launch_arguments={}.items()
-		),
-				
-		launch_ros.actions.Node(
-			package='joy', 
-			executable='joy_node', 
-			name='joy_node',
-			parameters=[joy_config_filepath]
-		),
 
-		launch_ros.actions.Node(
-			package='teleop_twist_joy', 
-			executable='teleop_node',
-			name='teleop_twist_joy_node',
-			parameters=[teleop_config_filepath]
-		),
+			launch_ros.actions.Node(
+				package='hoverboard-driver-pkg',
+				executable='hoverboard-driver',
+				name='hoverboard_driver_node',
+				parameters=[hoverboard_driver_config_filepath]
+			),  
 
-		launch_ros.actions.Node(
-			package='hoverboard-driver-pkg',
-			executable='hoverboard-driver',
-			name='hoverboard_driver_node',
-			parameters=[hoverboard_driver_config_filepath]
-		),            
+			launch_ros.actions.Node(
+				package='wt901_driver_pkg', 
+				executable='wt901', 
+				name='wt901_imu_node'
+			),
+					
+			launch_ros.actions.Node(
+				package='joy', 
+				executable='joy_node', 
+				name='joy_node',
+				parameters=[joy_config_filepath]
+			),
+
+			launch_ros.actions.Node(
+				package='teleop_twist_joy', 
+				executable='teleop_node',
+				name='teleop_twist_joy_node',
+				parameters=[teleop_config_filepath]
+			),
+
+
+			launch_ros.actions.Node(
+				package='robot_localization',
+				executable='ekf_node',
+				name='ekf_filter_node',
+				output='screen',
+				parameters=[robot_localization_config_filepath]
+			),
         ]
     ) # return LD

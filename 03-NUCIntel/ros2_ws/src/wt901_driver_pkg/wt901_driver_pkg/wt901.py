@@ -4,6 +4,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Imu
 
 from serial import Serial
+import numpy as np
 
 class WT901BLECL(Node):
 
@@ -34,13 +35,38 @@ class WT901BLECL(Node):
             self.angular_velocity_y = int.from_bytes(data[10:12], byteorder='little', signed="True")/32768*2000
             self.angular_velocity_z = int.from_bytes(data[12:14], byteorder='little', signed="True")/32768*2000
 
-            #Angle
+            #Angle (deg)
             self.angle_x = int.from_bytes(data[14:16], byteorder='little', signed="True")/32768*180
             self.angle_y = int.from_bytes(data[16:18], byteorder='little', signed="True")/32768*180
             self.angle_z = int.from_bytes(data[18:20], byteorder='little', signed="True")/32768*180
 
+            # Attitude (rad)
+            roll  = self.angle_x * 0.0174533 # convert to rad
+            pitch = self.angle_y * 0.0174533 # convert to rad
+            yaw   = self.angle_z * 0.0174533 # convert to rad
+
             msg = Imu()
-            #msg.data = 'Hello World: %d' % self.i
+            msg.header.frame_id = "imu"
+            msg.header.stamp = super().get_clock().now().to_msg()
+            msg.linear_acceleration.x = self.accel_x * 9.80665 # convert to m/s²
+            msg.linear_acceleration.y = self.accel_y * 9.80665 # convert to m/s² 
+            msg.linear_acceleration.z = self.accel_z * 9.80665 # convert to m/s²
+            msg.linear_acceleration_covariance[0] = 0.005 * 9.80665 # convert to m/s²
+            msg.linear_acceleration_covariance[4] = 0.005 * 9.80665 # convert to m/s²
+            msg.linear_acceleration_covariance[8] = 0.005 * 9.80665 # convert to m/s²
+            msg.angular_velocity.x = self.angular_velocity_x * 0.0174533 # convert to rad/s
+            msg.angular_velocity.y = self.angular_velocity_y * 0.0174533 # convert to rad/s
+            msg.angular_velocity.z = self.angular_velocity_z * 0.0174533 # convert to rad/s
+            msg.angular_velocity_covariance[0] = 0.05 * 0.0174533 # convert to rad/s
+            msg.angular_velocity_covariance[4] = 0.05 * 0.0174533 # convert to rad/s
+            msg.angular_velocity_covariance[8] = 0.05 * 0.0174533 # convert to rad/s
+            msg.orientation.x = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+            msg.orientation.y = np.cos(roll/2) * np.sin(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.cos(pitch/2) * np.sin(yaw/2)
+            msg.orientation.z = np.cos(roll/2) * np.cos(pitch/2) * np.sin(yaw/2) - np.sin(roll/2) * np.sin(pitch/2) * np.cos(yaw/2)
+            msg.orientation.w = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+            msg.orientation_covariance[0] = 0.05 * 0.0174533 # convert to rad/s
+            msg.orientation_covariance[4] = 0.05 * 0.0174533 # convert to rad/s
+            msg.orientation_covariance[8] = 0.05 * 0.0174533 # convert to rad/s
             self.publisher_.publish(msg)
 
             #print(imu_sensor.getAngle())        
