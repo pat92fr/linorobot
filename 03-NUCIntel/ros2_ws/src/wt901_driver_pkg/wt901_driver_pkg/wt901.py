@@ -36,14 +36,27 @@ class WT901BLECL(Node):
             self.angular_velocity_z = int.from_bytes(data[12:14], byteorder='little', signed="True")/32768*2000
 
             #Angle (deg)
-            self.angle_x = int.from_bytes(data[14:16], byteorder='little', signed="True")/32768*180
-            self.angle_y = int.from_bytes(data[16:18], byteorder='little', signed="True")/32768*180
-            self.angle_z = int.from_bytes(data[18:20], byteorder='little', signed="True")/32768*180
+            self.roll_deg = int.from_bytes(data[14:16], byteorder='little', signed="True")/32768*180
+            self.pitch_deg = int.from_bytes(data[16:18], byteorder='little', signed="True")/32768*180
+            self.yaw_deg = int.from_bytes(data[18:20], byteorder='little', signed="True")/32768*180
 
             # Attitude (rad)
-            roll  = self.angle_x * 0.0174533 # convert to rad
-            pitch = self.angle_y * 0.0174533 # convert to rad
-            yaw   = self.angle_z * 0.0174533 # convert to rad
+            roll  = self.roll_deg * 0.0174533 # convert to rad
+            pitch = self.pitch_deg * 0.0174533 # convert to rad
+            yaw   = self.yaw_deg * 0.0174533 # convert to rad
+
+            # euler to quaternion
+            # https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+            cr = np.cos(roll * 0.5);
+            sr = np.sin(roll * 0.5);
+            cp = np.cos(pitch * 0.5);
+            sp = np.sin(pitch * 0.5);
+            cy = np.cos(yaw * 0.5);
+            sy = np.sin(yaw * 0.5);
+            qw = cr * cp * cy + sr * sp * sy;
+            qx = sr * cp * cy - cr * sp * sy;
+            qy = cr * sp * cy + sr * cp * sy;
+            qz = cr * cp * sy - sr * sp * cy;
 
             msg = Imu()
             msg.header.frame_id = "imu"
@@ -60,18 +73,16 @@ class WT901BLECL(Node):
             msg.angular_velocity_covariance[0] = 0.05 * 0.0174533 # convert to rad/s
             msg.angular_velocity_covariance[4] = 0.05 * 0.0174533 # convert to rad/s
             msg.angular_velocity_covariance[8] = 0.05 * 0.0174533 # convert to rad/s
-            msg.orientation.x = np.sin(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) - np.cos(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
-            msg.orientation.y = np.cos(roll/2) * np.sin(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.cos(pitch/2) * np.sin(yaw/2)
-            msg.orientation.z = np.cos(roll/2) * np.cos(pitch/2) * np.sin(yaw/2) - np.sin(roll/2) * np.sin(pitch/2) * np.cos(yaw/2)
-            msg.orientation.w = np.cos(roll/2) * np.cos(pitch/2) * np.cos(yaw/2) + np.sin(roll/2) * np.sin(pitch/2) * np.sin(yaw/2)
+            msg.orientation.x = qx
+            msg.orientation.y = qy
+            msg.orientation.z = qz
+            msg.orientation.w = qw
             msg.orientation_covariance[0] = 0.05 * 0.0174533 # convert to rad/s
             msg.orientation_covariance[4] = 0.05 * 0.0174533 # convert to rad/s
             msg.orientation_covariance[8] = 0.05 * 0.0174533 # convert to rad/s
             self.publisher_.publish(msg)
 
-            #print(imu_sensor.getAngle())        
-            #print(imu_sensor.getAccel())        
-            #print(imu_sensor.getAngularVelocity())
+            #self.get_logger().info('Yaw:'+str(self.yaw_deg))  
         else:
             self.get_logger().info('Frame Error')
 
