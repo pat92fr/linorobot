@@ -345,7 +345,10 @@ public:
 			    odom_msg.twist.twist.angular.x = 0.0;
 			    odom_msg.twist.twist.angular.y = 0.0;
 			    odom_msg.twist.twist.angular.z = _actual_wz;
-    			_odom_pub->publish(odom_msg);
+    			
+				odom_msg.twist.covariance[0] = 0.1;
+			    
+				_odom_pub->publish(odom_msg);
 
 			    // Stuff and publish /tf
 				auto odom_tf_msg = geometry_msgs::msg::TransformStamped();

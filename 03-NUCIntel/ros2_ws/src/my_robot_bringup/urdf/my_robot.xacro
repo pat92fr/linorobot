@@ -173,7 +173,7 @@
     <joint name="laser_joint" type="fixed">
       <parent link="base_link"/>
       <child link="laser"/>
-      <origin xyz="0.200 0.0 0.200 " rpy="0 0 0"/>
+      <origin xyz="0.180 0.0 0.220 " rpy="0 0 0"/>
     </joint>
 
     <!-- laser Link -->
@@ -201,7 +201,7 @@
   <joint name="imu_joint" type="fixed">
     <parent link="base_link"/>
     <child link="imu"/>
-    <origin xyz="${wheel_x_offset} 0.0 0.0 " rpy="0 0 0"/>
+    <origin xyz="-0.120 0.110 0.260 " rpy="0 0 0"/>
   </joint>
 
   <!-- imu Link -->
