@@ -1,0 +1,10 @@
+MiniIMU.exe,140,0,
+Wit-Upgrade-Program.exe,612,1,
+ReplaceFileGrogram.exe,2,2,
+playPic\SINVT.jpg,1,10,https://item.taobao.com/item.htm?id=553403932452
+playPic\WT901C.jpg,1,10,https://item.taobao.com/item.htm?id=42861201221
+zh\MiniIMU.resources.dll,32,30,
+zh-CN\MiniIMU.resources.dll,32,30,
+zh-Hans\MiniIMU.resources.dll,32,30,
+SerialPortProtocol.dll,7,30,
+AD\12.jpg,1,40,https://robotcontrol.taobao.com

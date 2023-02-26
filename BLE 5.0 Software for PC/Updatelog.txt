@@ -1,0 +1,62 @@
+2019-08-20 09:36:39   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-08-20 09:42:31   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-08-20 09:44:41   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-08-24 17:46:07   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-08-24 18:08:03   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:09:42   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:13:33   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:13:39   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:24:00   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:27:52   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:28:03   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:28:08   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:29:09   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:29:12   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:30:20   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:33:39   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:33:42   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:39:15   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:39:18   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:42:32   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-10 15:42:36   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:39:34   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:39:41   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:46:10   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:46:14   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:49:55   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2019-09-18 09:50:39   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-04-09 19:33:52   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-04-09 19:34:04   访问[GetResponseMessage]出错:操作超时
+2020-04-09 19:40:57   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-04-09 19:41:03   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-04-24 14:36:02   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-04-24 14:36:15   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-24 14:36:20   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-24 14:36:50   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-26 10:59:56   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-26 11:00:00   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 11:35:27   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 11:35:38   访问[GetResponseMessage]出错:操作超时
+2020-04-27 11:35:48   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 11:35:52   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 14:44:05   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 14:44:17   访问[GetResponseMessage]出错:操作超时
+2020-04-27 14:44:42   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-04-27 14:44:46   E:\items\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 10:38:46   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Release\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 14:09:01   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 14:09:12   访问[GetResponseMessage]出错:操作超时
+2020-07-16 14:10:15   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 14:11:59   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 15:33:46   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 15:33:57   访问[GetResponseMessage]出错:操作超时
+2020-07-16 15:42:20   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 15:45:32   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList1.txt
+2020-07-16 15:45:43   访问[GetResponseMessage]出错:操作超时
+2020-07-16 15:45:56   F:\wtzn\蓝牙5.0上位机\MiniIMU\bin\Debug\蓝牙5.0上位机\temp\UpdateFileList0.txt
+2020-07-20 15:45:36   D:\WORK\desktop backup\STUFF\Tutorial\通用文件\Github\蓝牙5.0上位机_20200716\temp\UpdateFileList0.txt
+2020-07-20 15:46:09   D:\WORK\desktop backup\STUFF\Tutorial\通用文件\Github\BLE 5.0 Software for PC\temp\UpdateFileList0.txt
+2020-07-20 15:46:17   访问[GetResponseMessage]出错:操作超时
+2020-07-20 15:46:43   D:\WORK\desktop backup\STUFF\Tutorial\通用文件\Github\BLE 5.0 Software for PC\temp\UpdateFileList1.txt
+2023-02-26 01:36:30   C:\guithub\linorobot\BLE 5.0 Software for PC\temp\UpdateFileList1.txt
+2023-02-26 01:36:39   C:\guithub\linorobot\BLE 5.0 Software for PC\temp\UpdateFileList1.txt

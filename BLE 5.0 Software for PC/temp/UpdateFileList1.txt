@@ -1,0 +1,15 @@
+MiniIMU.exe,154,0,
+Wit-Upgrade-Program.exe,612,1,
+ReplaceFileGrogram.exe,2,2,
+playPic_EN\WT901WIFI1.jpg,1,10,https://www.aliexpress.com/item/Wireless-9-axis-Angle-accelerometer-module-gyro-gyroscope-electronic-compass-magnetic-
+magnetometer-arduinos-WIFI-sensor-WT91WIFI/32917394047.html
+zh\MiniIMU.resources.dll,38,30,
+zh-CN\MiniIMU.resources.dll,38,30,
+zh-Hans\MiniIMU.resources.dll,38,30,
+SerialPortProtocol.dll,12,30,
+HardWareInfo.dll,4,30,
+ISerialPort.dll,5,30,
+DllJavaMethod.dll,2,30,
+SensorAgreement.dll,5,30,
+DataTypeEnum.dll,3,30,
+AD_EN\StartPlay.jpg,2,40,https://www.wit-motion.com/

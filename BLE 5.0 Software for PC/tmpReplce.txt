@@ -1,0 +1,11 @@
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\MiniIMU.exe,C:\guithub\linorobot\BLE 5.0 Software for PC\MiniIMU.exe
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\zh\MiniIMU.resources.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\zh\MiniIMU.resources.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\zh-CN\MiniIMU.resources.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\zh-CN\MiniIMU.resources.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\zh-Hans\MiniIMU.resources.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\zh-Hans\MiniIMU.resources.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\SerialPortProtocol.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\SerialPortProtocol.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\HardWareInfo.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\HardWareInfo.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\ISerialPort.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\ISerialPort.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\DllJavaMethod.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\DllJavaMethod.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\SensorAgreement.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\SensorAgreement.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\DataTypeEnum.dll,C:\guithub\linorobot\BLE 5.0 Software for PC\DataTypeEnum.dll
+C:\guithub\linorobot\BLE 5.0 Software for PC\temp\AD_EN\StartPlay.jpg,C:\guithub\linorobot\BLE 5.0 Software for PC\AD_EN\StartPlay.jpg
