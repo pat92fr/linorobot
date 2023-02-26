@@ -315,7 +315,6 @@ public:
 				odom_msg.child_frame_id = "base_link";
 				odom_msg.header.stamp.sec = RCL_NS_TO_S(now);
 				odom_msg.header.stamp.nanosec = now - RCL_S_TO_NS(odom_msg.header.stamp.sec);
-
 				odom_msg.pose.pose.position.x = _x;
 				odom_msg.pose.pose.position.y = _y;
 				odom_msg.pose.pose.position.z = 0.0;
@@ -323,12 +322,10 @@ public:
     			odom_msg.pose.pose.orientation.y = q.y();
     			odom_msg.pose.pose.orientation.z = q.z();
     			odom_msg.pose.pose.orientation.w = q.w();
-
 			    for (unsigned int i = 0; i < odom_msg.pose.covariance.size(); ++i)
 			    {
       				odom_msg.pose.covariance[i] = 0.0;
     			}
-
 			    // Pose covariance (required by robot_pose_ekf)
 				/* pose covariance
 				    x  y  z  R  P  Y
@@ -349,12 +346,10 @@ public:
 			    odom_msg.twist.twist.angular.x = 0.0;
 			    odom_msg.twist.twist.angular.y = 0.0;
 			    odom_msg.twist.twist.angular.z = _actual_wz;
-    			
 			    for (unsigned int i = 0; i < odom_msg.twist.covariance.size(); ++i)
 			    {
       				odom_msg.twist.covariance[i] = 0.0;
     			}
-
 			    // Twist covariance (required by robot_pose_ekf)
 				/* twist covariance
 				    vx vy vz wx wy wz
@@ -366,28 +361,13 @@ public:
 				 wz 30 31 32 33 34 35  
 				*/
 				odom_msg.twist.covariance[0] = 0.1; // vx variance = 0.1m/s 
-				odom_msg.twist.covariance[35] = 0.05; // wz variance = 0.5rad/s ~3deg/s (must be higher thant IMU so EKF uses IMU)
-			    
+				odom_msg.twist.covariance[35] = 0.05; // wz variance = 0.05rad/s ~3deg/s (must be higher thant IMU so EKF uses IMU)
 				_odom_pub->publish(odom_msg);
-
-			    // Stuff and publish /tf
-				auto odom_tf_msg = geometry_msgs::msg::TransformStamped();
-				odom_tf_msg.header.frame_id = "odom"; //odom_msg.header.frame_id;
-				odom_tf_msg.child_frame_id = "base_link"; //odom_msg.child_frame_id;			    
-			    odom_tf_msg.header.stamp = odom_msg.header.stamp;
-			    odom_tf_msg.transform.translation.x = _x;
-			    odom_tf_msg.transform.translation.y = _y;
-			    odom_tf_msg.transform.translation.z = 0.0;
-			    odom_tf_msg.transform.rotation.x = q.x();
-			    odom_tf_msg.transform.rotation.y = q.y();
-			    odom_tf_msg.transform.rotation.z = q.z();
-			    odom_tf_msg.transform.rotation.w = q.w();
-			    //_br.sendTransform(odom_tf_msg);
 
 				// stats
 				++_stat_feedback_count;
 				static int32_t counter = 0;
-				if(++counter%100==0)
+				if(++counter%1000==0)
 				{
 					int32_t ellapsed_time = RCL_NS_TO_S(now) - _stat_start_time_s;
 					float packet_error_rate = (float)_stat_feedback_checksum_error/(float)_stat_feedback_count;

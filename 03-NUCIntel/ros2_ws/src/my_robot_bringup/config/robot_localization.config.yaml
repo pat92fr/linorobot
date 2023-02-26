@@ -48,7 +48,7 @@ ekf_filter_node:
         imu0: imu
         imu0_queue_size: 2
         imu0_config: [false, false, false,
-                      false, false, true, # use yaw (mag)
+                      false, false, false, #do not use yaw (mag) because calibration cannot be done easly indoor
                       false, false, false,
                       false, false,  true, # use gyro Z only, imu is rotated by 90°, don't use XY angular velocity
                       false, false, false] # Z acc not used,  imu is rotated by 90°, don't use XY acceleration, 

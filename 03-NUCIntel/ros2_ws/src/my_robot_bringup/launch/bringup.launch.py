@@ -7,7 +7,9 @@ import launch_ros.actions
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution, TextSubstitution
+from launch.substitutions import Command, LaunchConfiguration
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.parameter_descriptions import ParameterValue
 
 import yaml
 
@@ -38,9 +40,15 @@ def generate_launch_description():
         "robot_localization.config.yaml"
     )
 
+    robot_description_filepath = os.path.join(
+        get_package_share_directory('my_robot_bringup'), 
+        'urdf',
+        'my_robot.xacro'
+    )
     #with open(hoverboard_driver_config_filepath, 'r') as f:
     #    params = yaml.safe_load(f)['hoverboard_driver_node']['ros__parameters']
     #print(params)
+    robot_description = ParameterValue(Command(['xacro ', robot_description_filepath]),value_type=str)
 
 
     return launch.LaunchDescription(
@@ -88,7 +96,6 @@ def generate_launch_description():
 				parameters=[teleop_config_filepath]
 			),
 
-
 			launch_ros.actions.Node(
 				package='robot_localization',
 				executable='ekf_node',
@@ -96,5 +103,16 @@ def generate_launch_description():
 				output='screen',
 				parameters=[robot_localization_config_filepath]
 			),
-        ]
+            
+    		launch_ros.actions.Node(
+        		package='joint_state_publisher',
+        		executable='joint_state_publisher'
+        	),
+
+			launch_ros.actions.Node(
+        		package='robot_state_publisher',
+        		executable='robot_state_publisher',
+        		parameters=[{'robot_description': robot_description}]
+    		)			
+		]
     ) # return LD
