@@ -329,15 +329,19 @@ public:
       				odom_msg.pose.covariance[i] = 0.0;
     			}
 
-			    // Pose covariance (required by robot_pose_ekf) TODO: publish realistic values
-			    // Odometry yaw covariance must be much bigger than the covariance provided
-			    // by the imu, as the later takes much better measures
-			    odom_msg.pose.covariance[0] = 0.1;
-			    odom_msg.pose.covariance[7] = 0.1;
-			    odom_msg.pose.covariance[35] = 0.2;
-			    odom_msg.pose.covariance[14] = 1000.0;  // set a non-zero covariance on unused
-			    odom_msg.pose.covariance[21] = 1000.0;  // dimensions (z, pitch and roll); this
-			    odom_msg.pose.covariance[28] = 1000.0;  // is a requirement of robot_pose_ekf
+			    // Pose covariance (required by robot_pose_ekf)
+				/* pose covariance
+				    x  y  z  R  P  Y
+				 x  0  1  2  3  4  5  
+				 y  6  7  8  9 10 11
+				 z 12 13 14 15 16 17
+				 R 18 19 20 21 22 23
+				 P 24 25 26 27 28 29
+				 Y 30 31 32 33 34 35  
+				*/
+				// Pose covariance unknown = -1
+				odom_msg.pose.covariance[0] = -1.0;
+				// Note : we dont need a covariance matrix because EKF is configured not to use pose (x,y,z,roll,pitch,yaw) from wheel odometry
 
 			    odom_msg.twist.twist.linear.x = _actual_vx;
 			    odom_msg.twist.twist.linear.y = 0.0;
@@ -346,7 +350,23 @@ public:
 			    odom_msg.twist.twist.angular.y = 0.0;
 			    odom_msg.twist.twist.angular.z = _actual_wz;
     			
-				odom_msg.twist.covariance[0] = 0.1;
+			    for (unsigned int i = 0; i < odom_msg.twist.covariance.size(); ++i)
+			    {
+      				odom_msg.twist.covariance[i] = 0.0;
+    			}
+
+			    // Twist covariance (required by robot_pose_ekf)
+				/* twist covariance
+				    vx vy vz wx wy wz
+				 vx  0  1  2  3  4  5  
+				 vy  6  7  8  9 10 11
+				 vz 12 13 14 15 16 17
+				 wx 18 19 20 21 22 23
+				 wy 24 25 26 27 28 29
+				 wz 30 31 32 33 34 35  
+				*/
+				odom_msg.twist.covariance[0] = 0.1; // vx variance = 0.1m/s 
+				odom_msg.twist.covariance[35] = 0.05; // wz variance = 0.5rad/s ~3deg/s (must be higher thant IMU so EKF uses IMU)
 			    
 				_odom_pub->publish(odom_msg);
 

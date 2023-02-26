@@ -77,9 +77,9 @@ class WT901BLECL(Node):
             msg.orientation.y = qy
             msg.orientation.z = qz
             msg.orientation.w = qw
-            msg.orientation_covariance[0] = 0.05 * 0.0174533 # convert to rad/s
-            msg.orientation_covariance[4] = 0.05 * 0.0174533 # convert to rad/s
-            msg.orientation_covariance[8] = 0.05 * 0.0174533 # convert to rad/s
+            msg.orientation_covariance[0] = 0.05 * 0.0174533 # convert to rad
+            msg.orientation_covariance[4] = 0.05 * 0.0174533 # convert to rad
+            msg.orientation_covariance[8] = 0.05 * 0.0174533 # convert to rad
             self.publisher_.publish(msg)
 
             #self.get_logger().info('Yaw:'+str(self.yaw_deg))  
