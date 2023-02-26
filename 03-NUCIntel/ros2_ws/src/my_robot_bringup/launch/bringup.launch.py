@@ -41,14 +41,16 @@ def generate_launch_description():
     )
 
     robot_description_filepath = os.path.join(
-        get_package_share_directory('my_robot_bringup'), 
+        get_package_share_directory('my_robot_description'), 
         'urdf',
         'my_robot.xacro'
     )
+
+    robot_description = ParameterValue(Command(['xacro ', robot_description_filepath]),value_type=str)
+
     #with open(hoverboard_driver_config_filepath, 'r') as f:
     #    params = yaml.safe_load(f)['hoverboard_driver_node']['ros__parameters']
     #print(params)
-    robot_description = ParameterValue(Command(['xacro ', robot_description_filepath]),value_type=str)
 
 
     return launch.LaunchDescription(

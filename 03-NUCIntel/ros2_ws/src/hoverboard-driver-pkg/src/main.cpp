@@ -312,7 +312,7 @@ public:
 		        // publish odom
 				auto odom_msg = nav_msgs::msg::Odometry();
 				odom_msg.header.frame_id = "odom";
-				odom_msg.child_frame_id = "base_link";
+				odom_msg.child_frame_id = "base_footprint";
 				odom_msg.header.stamp.sec = RCL_NS_TO_S(now);
 				odom_msg.header.stamp.nanosec = now - RCL_S_TO_NS(odom_msg.header.stamp.sec);
 				odom_msg.pose.pose.position.x = _x;
@@ -454,7 +454,6 @@ private:
 	rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr _cmd_vel_sub;
 	rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr _odom_pub;
 	rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr _speed_setpoint_pub;
-	//tf2_ros::TransformBroadcaster _br;
 	OnSetParametersCallbackHandle::SharedPtr _param_cb_ptr;
 
 	rclcpp::TimerBase::SharedPtr _timer;

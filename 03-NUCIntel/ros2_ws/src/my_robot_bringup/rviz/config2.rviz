@@ -8,7 +8,8 @@ Panels:
         - /Status1
         - /Grid1
         - /RobotModel1
-        - /RobotModel1/Status1
+        - /RobotModel1/Mass Properties1
+        - /RobotModel1/Links1/base_footprint1
         - /TF1
         - /TF1/Frames1
         - /Odometry1
@@ -63,9 +64,14 @@ Visualization Manager:
         Link Tree Style: Links in Alphabetic Order
         base_footprint:
           Alpha: 1
+          Show Axes: true
+          Show Trail: true
+        camera:
+          Alpha: 1
           Show Axes: false
           Show Trail: false
-        base_link:
+          Value: true
+        case:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -110,7 +116,9 @@ Visualization Manager:
         All Enabled: true
         base_footprint:
           Value: true
-        base_link:
+        camera:
+          Value: true
+        case:
           Value: true
         caster_wheel:
           Value: true
@@ -126,24 +134,25 @@ Visualization Manager:
           Value: true
       Marker Scale: 1
       Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
+      Show Arrows: false
+      Show Axes: false
+      Show Names: false
       Tree:
         odom:
-          base_link:
-            base_footprint:
-              {}
-            caster_wheel:
-              {}
-            imu:
-              {}
-            laser:
-              {}
-            left_wheel:
-              {}
-            right_wheel:
-              {}
+          base_footprint:
+            case:
+              camera:
+                {}
+              caster_wheel:
+                {}
+              imu:
+                {}
+              laser:
+                {}
+              left_wheel:
+                {}
+              right_wheel:
+                {}
       Update Interval: 0
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -168,14 +177,14 @@ Visualization Manager:
       Name: Odometry
       Position Tolerance: 0.10000000149011612
       Shape:
-        Alpha: 1
+        Alpha: 0.5
         Axes Length: 1
         Axes Radius: 0.10000000149011612
         Color: 255; 25; 0
-        Head Length: 0.30000001192092896
+        Head Length: 0.20000000298023224
         Head Radius: 0.10000000149011612
-        Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
+        Shaft Length: 0.5
+        Shaft Radius: 0.02500000037252903
         Value: Arrow
       Topic:
         Depth: 5
@@ -243,7 +252,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -255,7 +264,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 6.18283224105835
+      Distance: 2.519937515258789
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -270,10 +279,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1297972202301025
+      Pitch: 0.7497974038124084
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.6018388271331787
+      Yaw: 1.2118384838104248
     Saved: ~
 Window Geometry:
   Displays:
