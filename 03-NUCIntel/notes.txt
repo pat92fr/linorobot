@@ -137,7 +137,11 @@ https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html
 ros2 launch slam_toolbox online_async_launch.py
 ros2 launch nav2_bringup navigation_launch.py
 
+Save de map : 
+ros2 run nav2_map_server map_saver_cli -f ~/map
 
+Set destination :
+ros2 topic pub /goal_pose geometry_msgs/PoseStamped "{header: {stamp: {sec: 0}, frame_id: 'map'}, pose: {position: {x: 0.2, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}"
 
 
 
