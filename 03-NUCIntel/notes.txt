@@ -3,7 +3,21 @@ Adresses IP !
 Livebox 192.168.1.21
 Oppo : 192.168.157.145
 
+sudo gedit /etc/netplan/01-network-manager-all.yaml 
+sudo netplan --debug apply
 
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+  wifis:
+  	wlp58s0:
+  		access-points:
+			"OPPOReno2":
+				password: "xx"
+  			"Livebox-A916":
+  				password: "xx"
+  			dhcp4: true		
 Installation :
 --------------
 
