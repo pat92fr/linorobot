@@ -21,6 +21,11 @@ network:
 Installation :
 --------------
 
+if setuptool warning when colcon build :
+sudo apt install python3-pip
+pip install setuptools==58.2.0
+
+
 Put in ~/.bashrc thoses following lines :
 
 source /opt/ros/humble/setup.bash
