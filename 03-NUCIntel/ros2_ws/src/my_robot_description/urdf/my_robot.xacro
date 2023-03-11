@@ -68,13 +68,13 @@
   
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
-    <child link="case"/>
+    <child link="base_link"/>
     <origin xyz="${-wheel_x_offset} 0 ${wheel_radius-wheel_z_offset+base_height/2.}" rpy="0 0 0"/>
   </joint>
 
   <!-- ********************** ROBOT CASE *********************************  -->
 
-  <link name="case">
+  <link name="base_link">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -103,7 +103,7 @@
   <!-- ****************** ROBOT WHEELS ***************************  -->
 
     <joint name="left_wheel_joint" type="continuous">
-      <parent link="case"/>
+      <parent link="base_link"/>
       <child link="left_wheel"/>
       <origin xyz="${wheel_x_offset} ${wheel_len/2+wheel_y_offset} ${wheel_z_offset-base_height/2.}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
@@ -135,7 +135,7 @@
     </link>
 
     <joint name="right_wheel_joint" type="continuous">
-      <parent link="case"/>
+      <parent link="base_link"/>
       <child link="right_wheel"/>
       <origin xyz="${wheel_x_offset} ${-wheel_len/2-wheel_y_offset} ${wheel_z_offset-base_height/2.}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
@@ -167,7 +167,7 @@
     </link>
 
     <joint name="caster_wheel_joint" type="fixed">
-      <parent link="case"/>
+      <parent link="base_link"/>
       <child link="caster_wheel"/>
       <origin xyz="${caster_x_offset} 0 ${caster_z_offset-base_height/2.}" rpy="0 0 0"/>
     </joint>
@@ -203,7 +203,7 @@
 
     <!-- laser joint -->
     <joint name="laser_joint" type="fixed">
-      <parent link="case"/>
+      <parent link="base_link"/>
       <child link="laser"/>
       <origin xyz="0.180 0.0 ${base_height/2.+laser_height/2.} " rpy="0 0 0"/>
     </joint>
@@ -240,7 +240,7 @@
 
   <!-- imu joint -->
   <joint name="imu_joint" type="fixed">
-    <parent link="case"/>
+    <parent link="base_link"/>
     <child link="imu"/>
     <origin xyz="-0.120 0.110 ${base_height/2.+imu_height/2.+0.160} " rpy="0 0 0"/>
   </joint>
@@ -276,7 +276,7 @@
 
   <!-- camera joint -->
   <joint name="camera_joint" type="fixed">
-    <parent link="case"/>
+    <parent link="base_link"/>
     <child link="camera"/>
     <origin xyz="0.110 0.0 ${base_height/2.+camera_height/2.+0.100} " rpy="0 0 0"/>
   </joint>

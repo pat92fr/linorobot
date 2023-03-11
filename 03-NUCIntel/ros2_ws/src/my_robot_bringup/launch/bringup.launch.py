@@ -115,6 +115,42 @@ def generate_launch_description():
         		package='robot_state_publisher',
         		executable='robot_state_publisher',
         		parameters=[{'robot_description': robot_description}]
-    		)			
+    		),
+
+			# Start Slam Toolbox
+			# ros2 launch slam_toolbox online_async_launch.py
+			IncludeLaunchDescription(
+				PythonLaunchDescriptionSource(
+					[
+						PathJoinSubstitution(
+							[
+								FindPackageShare('slam_toolbox'),
+								"launch/"
+								'online_async_launch.py'
+							]
+						)
+					]
+				),
+				launch_arguments={}.items()
+			),	
+
+			# Start Nav2
+			# ros2 launch nav2_bringup navigation_launch.py
+
+			IncludeLaunchDescription(
+				PythonLaunchDescriptionSource(
+					[
+						PathJoinSubstitution(
+							[
+								FindPackageShare('nav2_bringup'),
+								"launch/"
+								'navigation_launch.py'
+							]
+						)
+					]
+				),
+				launch_arguments={}.items()
+			),	
+
 		]
     ) # return LD
