@@ -409,16 +409,18 @@ public:
 		}
 
 		// timeout setpoints
+		
 		rcutils_time_point_value_t now;
 		if (rcutils_system_time_now(&now) != RCUTILS_RET_OK)
 		{
 			RCLCPP_ERROR(this->get_logger(), "Failed to get system time");
 		}		
-		if( RCL_NS_TO_S(now) > (_setpoint_timestamp_s+2) ) // 2 sec time-out
+		if( RCL_NS_TO_S(now) > (_setpoint_timestamp_s+22) ) // 22 sec time-out
 		{
 			_setpoint_vx = 0.0f;
 			_setpoint_wz = 0.0f;
 		}
+		
 
 		// filter speed feedback
 		static float const alpha = 0.5f;
@@ -441,7 +443,7 @@ public:
 		float w_error = _setpoint_wz_profil - _actual_wz_filtered;
 
 		float x_speed = _x_pid.process(x_error,_setpoint_vx_profil);
-		float w_speed = _w_pid.process(w_error,_setpoint_wz);
+		float w_speed = _w_pid.process(w_error,_setpoint_wz_profil);
 
 		// trace
 		geometry_msgs::msg::Twist m;
