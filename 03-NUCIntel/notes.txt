@@ -177,6 +177,10 @@ Erreur :
 [controller_server-10] [INFO] [1678572347.477088251] [local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "base_link" passed to canTransform argument source_frame - frame does not exist
 
 
+[planner_server-12] [WARN] [1678574120.599585671] [global_costmap.global_costmap]: Sensor origin at (0.03, -0.00) is out of map bounds (0.00, 0.00) to (4.98, 4.98). The costmap cannot raytrace for it.
+[planner_server-12] [WARN] [1678574121.599366981] [nav2_costmap_2d]: Robot is out of bounds of the costmap!
+[planner_server-12] [WARN] [1678574121.599413384] [global_costmap.global_costmap]: Sensor origin at (0.03, -0.00) is out of map bounds (0.00, 0.00) to (4.98, 4.98). The costmap cannot raytrace for it.
+[planner_server-12] [INFO] [1678574122.412471451] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 89 X 84 at 0.050000 m/pix
 
 
 
