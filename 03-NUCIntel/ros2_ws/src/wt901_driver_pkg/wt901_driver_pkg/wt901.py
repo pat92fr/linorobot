@@ -8,13 +8,27 @@ import numpy as np
 
 class WT901BLECL(Node):
 
+    """ 
+    The IMU is linked to a /dev/ttyUSBn at startup.
+    
+    Edit a /etc/udev/rules.d/49-myusb.rule
+    
+    # IMU via internal FTDI CH340 Serial Converter
+    SUBSYSTEMS=="usb", GROUP="dialout", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0666", SYMLINK+="WT901"
+
+    Tape lsusb to check the vendor id and the product id of the hoberboard :
+    > Bus 001 Device 003: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+
+    Note that Ubuntu comes with a bad driver for CH340. Replace it by the generic one.
+
+    """
 
     def __init__(self):
         super().__init__('wt901_driver')
         self.publisher_ = self.create_publisher(Imu, '/imu', 10)
         timer_period = 0.02  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        self.myserial = Serial("/dev/ttyUSB1", baudrate = 115200, timeout = 1)
+        self.myserial = Serial("/dev/WT901", baudrate = 115200, timeout = 1)
         self.myserial.reset_input_buffer()
         self.myserial.write([0xFF,0xAA,0x03,0x08,0x00]) # 50Hz
         self.myserial.write([0xFF,0xAA,0x00,0x00,0x00]) # SAVE

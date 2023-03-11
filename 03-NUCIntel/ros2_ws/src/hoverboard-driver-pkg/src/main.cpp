@@ -15,7 +15,20 @@
 
 #include <math.h>
 
-#define PORT "/dev/ttyUSB0"
+//#define PORT "/dev/ttyUSB0"
+#define PORT "/dev/Hoverboard"
+/*
+ * The Hoverboard is linked to a /dev/ttyUSBn at startup.
+ *
+ * Edit a /etc/udev/rules.d/49-myusb.rule
+ * 
+ * # HOVERBOARD via FTDI CP210x UART Bridge
+ * SUBSYSTEMS=="usb", GROUP="dialout", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="0666", SYMLINK+="Hoverboard"
+ * 
+ * Tape lsusb to check the vendor id and the product id of the hoberboard :
+ * > Bus 001 Device 004: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+ * 
+ */
 
 
 class driver_node : public rclcpp::Node
