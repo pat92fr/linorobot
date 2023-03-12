@@ -14,7 +14,7 @@ def generate_launch_description():
     default_model_path = description_pkg_path / 'urdf/my_robot.xacro'
 
     this_pkg_path = get_package_share_path('my_robot_bringup')
-    default_rviz_config_path = this_pkg_path / 'rviz/config3.rviz'
+    default_rviz_config_path = this_pkg_path / 'rviz/config4.rviz'
 
     gui_arg = DeclareLaunchArgument(
         name='gui',
