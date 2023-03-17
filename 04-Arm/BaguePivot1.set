@@ -1,0 +1,10 @@
+(  )
+(PN=  
+( PART NAME=BaguePivot1 )
+( PROGRAM NUMBER=0001 )
+( MACHINE=TORMACH 15L )
+( ESTIMATED MACHINE TIME=0 HRS.  0 MIN.  33 SEC. )
+( STATION  TOOL TYPE  DIAMETER  CORNER RADIUS  DESCRIPTION               )
+( -------  ---------  --------  -------------  -------------------- )
+(  005     DRILL        002.50                            F 2.5mm     )
+(  008     ENDMILL      006.00                            fraise 6mm 4 dents pvc  )
